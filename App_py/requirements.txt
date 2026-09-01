@@ -1,6 +1,6 @@
-shiny
-shinywidgets
-pandas
-plotly
-numpy
-openpyxl
+shiny==1.6.0
+shinywidgets==0.8.1
+pandas==3.0.2
+plotly==6.9.0
+numpy==2.4.4
+openpyxl==3.1.5
