@@ -11,9 +11,33 @@ python3 -m pip install -r App_py/requirements.txt
 Open <http://127.0.0.1:3838>. The launcher watches code and data files, so reuse
 the running server instead of restarting it or opening the app on another port.
 
+## Code layout
+
+`app.py` holds the UI and the server; the layers underneath it live in their
+own modules so they can be tested and edited without touching the app shell:
+
+- `dataprep.py` — CSV loading and every data repair: the regional DTC and
+  Amazon splits, the Metorik renewals series, the pre-2026 subscription tax
+  split, the renewals exclusion with its rate rebasing, and the survey
+  engagement frame.
+- `formatting.py` — number, money, and percent formatting, `safe_div`,
+  `weighted_mean`, and the year-over-year delta pill.
+- `figures.py` — the plotly scaffolding shared by every chart.
+
+The repair logic is covered by `tests/` at the repository root; run
+`python3 -m pytest tests/` after changing it.
+
 ## Data pipeline
 
-Everything is Python; no R is needed at any stage.
+Everything is Python; no R is needed at any stage. The usual entry point runs
+both required steps in order:
+
+```bash
+python3 scripts/sync_all.py            # sheets sync, then retail sell-through
+python3 scripts/sync_all.py --renewals # also rebuild the renewals series
+```
+
+The individual steps, when needed:
 
 ```bash
 # Pull the sales workbooks into data/*.csv (all years by default)
@@ -37,7 +61,10 @@ python3 scripts/build_renewals_series.py
 
 Each sync writes a timestamped `.backup_*` copy of the CSVs it is about to
 change, plus `google_sheets_sync_sources_*.csv` and `..._skips_*.csv` logs
-recording which sheet row every field came from.
+recording which sheet row every field came from. These are all gitignored:
+commit the refreshed CSVs after a sync and git history is the real safety
+net, with the provenance logs kept on disk until the next housekeeping pass
+(the pre-git ones are archived in `/Users/nika/nika_cursor2_archive/`).
 
 ### Where the DTC figures come from
 
