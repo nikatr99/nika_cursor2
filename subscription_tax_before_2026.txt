@@ -1,0 +1,118 @@
+SUBSCRIPTION TAX BEFORE JANUARY 2026
+How the dashboard fills in the line the Summary sheets never had
+Written 30 Jul 2026, updated the same day when the EU export arrived
+
+
+WHAT WAS MISSING
+
+The workbooks only report subscription tax as its own row from January 2026, where
+the Summary splits the subscription block into "- Line Item Total" and "- Taxes".
+Before that there is no such row anywhere in the workbook.
+
+Everything else was always tracked. Subscription revenue has its own line for the
+whole history. Subscription tax is the single exception.
+
+
+THE MONEY WAS NEVER MISSING, ONLY THE SPLIT
+
+Before 2026 the region block's "- Taxes" row is the FULL tax, subscriptions
+included. This is verifiable rather than assumed:
+
+  - For every month from Oct 2024 to Dec 2025, that row equals the DTC P&L's own
+    total tax row to the cent.
+  - From Jan 2026 onwards the two rows (product tax + subscription tax) add back
+    to that same P&L total.
+
+So DTC Revenue was always complete. What was wrong was the split: the product tax
+line was overstated by the subscription tax, and therefore so was the
+"excl. renewals" headline, which is the product side only. That made 2025 look
+better than 2026 for no reason other than bookkeeping.
+
+
+HOW THE PRE-2026 FIGURE IS DERIVED
+
+US - measured, not estimated.
+  Taken from the Metorik export (App_py/data/renewals_daily_us.csv, produced by
+  scripts/build_renewals_series.py). Metorik reports each day twice, with and
+  without renewals; the tax difference between the two is the subscription tax.
+
+  Validated against the workbook across the seven months of 2026 where both exist:
+
+      workbook  207,619
+      Metorik   207,436     off by -0.09%
+
+  Monthly gaps were -149, -15, -64, -212, -113, 0 and +370. The one visible
+  outlier is July 2026, a part month.
+
+EU - measured too, since 30 Jul 2026, when the EU export arrived.
+  The export reports in euros, while the workbook reports dollars converted at the
+  daily rate, so no euro amount in it can be used as it stands. A ratio, though, is
+  the same number in either currency. So what is taken from it is the day's renewal
+  SHARE of tax, applied to the workbook's own dollar tax line.
+
+  Validated the same way as the US, across the seven months of 2026 where the
+  workbook reports EU subscription tax itself:
+
+      workbook  31,392
+      Metorik   31,411     off by +0.06%
+
+  Four of the seven months come out exact to the cent; the widest miss is 0.96%.
+  The 21% VAT model it replaced was off by -1.69% over the same months, so this is
+  the better of the two, though both were close enough that the pre-2026 EU figure
+  barely moved: 31,356 measured against 31,200 modelled, on a combined
+  reclassification of 274,689.
+
+  The rate is still there as a fallback for the months before EU renewals begin,
+  where a renewal share of zero would otherwise miss the tax on brand-new
+  subscriptions. That covers Oct and Nov 2024.
+
+
+WHAT IT CHANGES
+
+The amount MOVES between two rows. Nothing is added and nothing is removed, so
+every "incl. renewals" total is untouched:
+
+    FY2024   32,277,844.42     unchanged
+    FY2025   41,334,295.20     unchanged
+    Jul 2026    621,881.53     unchanged
+
+The "excl. renewals" figure changes, because the subscription tax now correctly
+falls outside it:
+
+    FY2024   30,949,167   ->   30,897,774.85    (moved  51,392)
+    FY2025   34,681,060   ->   34,457,762.65    (moved 223,297)
+    Jul 2026    278,855.73 ->     278,855.73    (unchanged)
+
+2026 does not move because the workbook already split it there. The earlier years
+were brought onto 2026's basis, not the other way round, so year-over-year is now
+like-for-like.
+
+
+SAFEGUARDS
+
+  - The carve-out is capped at whatever the tax line actually holds, so it can
+    never push a tax figure negative.
+  - Checked on all 731 pre-2026 days: no day needed capping, and the tightest
+    margin was still 171.61 clear.
+  - US + EU equals the combined figure exactly for both tax columns.
+  - The implied US rate lands at 3-4% from Dec 2024 onwards, matching 2026's
+    3.3-4.1%. Early 2024 looks erratic in percentage terms, but on a subscription
+    base of a few thousand dollars the amounts are two and three digits, so it
+    makes no material difference.
+
+
+WHERE IT LIVES
+
+  App_py/app.py, function split_subscription_tax()
+    SUBSCRIPTION_TAX_SPLIT_FROM = 2026-01-01   (workbook starts splitting here)
+    EU_SUBSCRIPTION_TAX_RATE    = 0.21         (fallback only, pre-renewal months)
+
+  App_py/data/renewals_daily_us.csv    daily, amounts and counts
+  App_py/data/renewals_daily_eu.csv    daily, shares and counts only
+    Both written by scripts/build_renewals_series.py from the exports in "wo
+    renewals/". Rerun that script whenever a new export lands.
+
+It runs at load time, not in the sync, so App_py/data/revenue_data.csv stays a
+faithful copy of what the workbooks say and the derived part sits in one place. It
+is applied before the region columns are computed, so US, EU and combined all come
+out consistent.

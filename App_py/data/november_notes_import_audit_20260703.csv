@@ -1,0 +1,82 @@
+"source_workbook","source_sheet","source_row","source_col","start","end","note"
+"11 - November24 - Sales.xlsx","Summary",3,22,2024-11-21,2024-11-21,"New CTA's on Website US/EU"
+"11 - November24 - Sales.xlsx","Summary",3,26,2024-11-25,2024-11-25,"Improve site performance: PHP changes, mp4 caching, Remove HotJar Plugin"
+"11 - November24 - Sales.xlsx","Summary",3,27,2024-11-26,2024-11-26,"Perch Extender Blue OOS (EU)"
+"11 - November24 - Sales.xlsx","Summary",3,28,2024-11-27,2024-11-27,"PO Box debugging (/checkout)"
+"11 - November24 - Sales.xlsx","Summary",3,29,2024-11-28,2024-11-28,"SHOP EU/US | Add-on product detail page mapping"
+"11 - November24 - Sales.xlsx","Summary",3,30,2024-11-29,2024-11-29,"V1 SKU1 In stock (EU)"
+"11 - November24 - Sales.xlsx","Summary",3,31,2024-11-30,2024-11-30,"3in1 OOS (/Storefront/US)"
+"11 - November24 - Sales.xlsx","Summary",4,6,2024-11-05,2024-11-05,"US Elections"
+"11 - November24 - Sales.xlsx","Summary",4,7,2024-11-06,2024-11-06,"A/B Testing (/homepage). Old above the fold hero animation vs. new one."
+"11 - November24 - Sales.xlsx","Summary",4,12,2024-11-11,2024-11-11,"Shop; Suet Ball pop-up"
+"11 - November24 - Sales.xlsx","Summary",4,13,2024-11-12,2024-11-12,"A/B Testing (/Storefront). New product cards"
+"11 - November24 - Sales.xlsx","Summary",4,14,2024-11-13,2024-11-13,"Waitlist for Nature station"
+"11 - November24 - Sales.xlsx","Summary",4,15,2024-11-14,2024-11-14,"Premium membership deployed (EU/cart)"
+"11 - November24 - Sales.xlsx","Summary",4,16,2024-11-15,2024-11-15,"V1 OOS and reduced pricing to MAP
+V2 reduced pricing to 40% off and in stock."
+"11 - November24 - Sales.xlsx","Summary",4,19,2024-11-18,2024-11-18,"V1 SR OOS reduced pricing to 29%. V1 Reduced pricing to 14% in stock. V2 no SR reduced pricing to 33%"
+"11 - November24 - Sales.xlsx","Summary",4,20,2024-11-19,2024-11-19,"New Checkout US/EU"
+"11 - November24 - Sales.xlsx","Summary",4,21,2024-11-20,2024-11-20,"A/B Family Plan (US/EU)"
+"11 - November24 - Sales.xlsx","Summary",4,22,2024-11-21,2024-11-21,"Slight changes to the copy / Family Bundle"
+"11 - November24 - Sales.xlsx","Summary",4,23,2024-11-22,2024-11-22,"Change Renders (/homepage). Add-ons, 2nd asset from above"
+"11 - November24 - Sales.xlsx","Summary",4,25,2024-11-24,2024-11-24,"Site unable to function for 1hr from 13.50 to 14.50"
+"11 - November24 - Sales.xlsx","Summary",4,26,2024-11-25,2024-11-25,"Change UGC video Sizes on Storefront US/EU"
+"11 - November24 - Sales.xlsx","Summary",4,27,2024-11-26,2024-11-26,"Checkout US/EU; Billing & Shipping 
+- Show only two countries on US website : US & CA
+- Show only European countries on EU Website
+- Fix payment cards widget resolution
+- Implement segregation lines on certain locations
+- Subscription payments: Change copy from ‘’initial shipment’’ to ‘’shipping’’"
+"11 - November24 - Sales.xlsx","Summary",4,28,2024-11-27,2024-11-27,"3in1 Add ons new render & copy (/cart)"
+"11 - November24 - Sales.xlsx","Summary",4,29,2024-11-28,2024-11-28,"WOO Plug in integration for changing Admin settings"
+"11 - November24 - Sales.xlsx","Summary",4,30,2024-11-29,2024-11-29,"CHECKOUT US/EU | BUG - Address PO Box issue"
+"11 - November24 - Sales.xlsx","Summary",5,6,2024-11-05,2024-11-05,"A/B Testing (/cart). Show subscription vs. not showing subscription"
+"11 - November24 - Sales.xlsx","Summary",5,7,2024-11-06,2024-11-06,"BFCM theme live (US) - Showing only V2 - RRP artifically increased to show 30% off on MAP"
+"11 - November24 - Sales.xlsx","Summary",5,13,2024-11-12,2024-11-12,"V1 Yellow SR In stock /shop"
+"11 - November24 - Sales.xlsx","Summary",5,19,2024-11-18,2024-11-18,"Debuging payment delay"
+"11 - November24 - Sales.xlsx","Summary",5,20,2024-11-19,2024-11-19,"Debuging payment delay"
+"11 - November24 - Sales.xlsx","Summary",5,21,2024-11-20,2024-11-20,"Suet Holder OOS
+New Pop-up Wallmount (/storefront)
+All feeders are in stock, exept for the Yellow v1 ns feeder, Yellow feeders are OOS on EU site"
+"11 - November24 - Sales.xlsx","Summary",5,22,2024-11-21,2024-11-21,"New Pro Bundle (/Storefront) US"
+"11 - November24 - Sales.xlsx","Summary",5,23,2024-11-22,2024-11-22,"Family Plan A/B test - new pricing ($89.99)"
+"11 - November24 - Sales.xlsx","Summary",5,26,2024-11-25,2024-11-25,"Cart (US/EU)
+- Implement new add-on designs in cart from a/b test
+- Remove Tax calculation from Family Premium 
+- Adjust the text (pricing segment) on Family Premium"
+"11 - November24 - Sales.xlsx","Summary",5,27,2024-11-26,2024-11-26,"FS Bug - Unfinished Order Lines"
+"11 - November24 - Sales.xlsx","Summary",5,28,2024-11-27,2024-11-27,"A/B test Bundle on 1st place on US Storefront"
+"11 - November24 - Sales.xlsx","Summary",5,29,2024-11-28,2024-11-28,"New Pricing
+V2 & Bundle_US"
+"11 - November24 - Sales.xlsx","Summary",5,30,2024-11-29,2024-11-29,"New Logic for Bundle/Wallmount/ in cart"
+"11 - November24 - Sales.xlsx","Summary",6,13,2024-11-12,2024-11-12,"VAT removed (/checkout)"
+"11 - November24 - Sales.xlsx","Summary",6,20,2024-11-19,2024-11-19,"Removed: 'Related subscription' and Seeds subscription (/post-purchase)"
+"11 - November24 - Sales.xlsx","Summary",6,21,2024-11-20,2024-11-20,"New Pricing
+V1 & V2 - Official MAP"
+"11 - November24 - Sales.xlsx","Summary",6,22,2024-11-21,2024-11-21,"New Footer / Website US/EU"
+"11 - November24 - Sales.xlsx","Summary",6,23,2024-11-22,2024-11-22,"Upload UGC adds to .eu server"
+"11 - November24 - Sales.xlsx","Summary",6,26,2024-11-25,2024-11-25,"HP (US/EU): 
+- New renders for BB PRO Box and Add-ons (Mobile/desktop)
+- CTA button on Audubon assed (Mobile)
+- Move the 86% of users segment under HERO (Mobile)
+- FAQ button in the drop down menu"
+"11 - November24 - Sales.xlsx","Summary",6,27,2024-11-26,2024-11-26,"Disclaimer ""Processing order... (might take a minute)"" (/Checkout)"
+"11 - November24 - Sales.xlsx","Summary",6,28,2024-11-27,2024-11-27,"PDP US/EU
+- New backgrounds on renders
+- Thumbnail feeder render on CTA
+- App review 45K
+- Smaller RRP
+- Change Copy on HERO"
+"11 - November24 - Sales.xlsx","Summary",6,29,2024-11-28,2024-11-28,"35k overspend at 23:15 from Meta"
+"11 - November24 - Sales.xlsx","Summary",7,13,2024-11-12,2024-11-12,"HBF + Premium (/cart)"
+"11 - November24 - Sales.xlsx","Summary",7,21,2024-11-20,2024-11-20,"Debuging payment delay"
+"11 - November24 - Sales.xlsx","Summary",7,22,2024-11-21,2024-11-21,"New CTA's on Website US/EU"
+"11 - November24 - Sales.xlsx","Summary",7,23,2024-11-22,2024-11-22,"Debuging payment delay"
+"11 - November24 - Sales.xlsx","Summary",7,27,2024-11-26,2024-11-26,"Site unable to function in the last 12h.
+* Screen froze during payment.
+* Order didn't process; site kept loading.
+* Credit card charged, no confirmation email received.
+* Page didn't reload; duplicate orders made.
+* Received multiple confirmations; need only one."
+"11 - November24 - Sales.xlsx","Summary",7,28,2024-11-27,2024-11-27,"Improve site performance: Woocemerce, db lock"
+"11 - November24 - Sales.xlsx","Summary",8,22,2024-11-21,2024-11-21,"PDP's / Updated FAQ's / EU/US"

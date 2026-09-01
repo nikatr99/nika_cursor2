@@ -1,0 +1,53 @@
+destination_column,source_file,source_sheet,source_row,source_label,changed_cells
+q4_New customer,10 - October - Sales.xlsx,PP - Data,19,New customer,31
+q4_Existing customer,10 - October - Sales.xlsx,PP - Data,20,Existing customer,31
+Nq3_Just me,10 - October - Sales.xlsx,PP - Data,29,Just me,19
+Nq3_My parents,10 - October - Sales.xlsx,PP - Data,30,My parents,25
+Nq3_Spouse,10 - October - Sales.xlsx,PP - Data,31,Spouse,28
+Nq3_I will use with my family,10 - October - Sales.xlsx,PP - Data,32,I will use with my family,27
+Nq1_Facebook / Instagram,10 - October - Sales.xlsx,PP - Data,40,Facebook / Instagram,27
+Nq1_Friends / Family,10 - October - Sales.xlsx,PP - Data,41,Friends / Family,31
+Nq1_TikTok,10 - October - Sales.xlsx,PP - Data,42,TikTok,5
+Nq1_TV / Radio,10 - October - Sales.xlsx,PP - Data,43,TV / Radio,10
+Nq1_Blog / Article,10 - October - Sales.xlsx,PP - Data,44,Blog / Article,14
+Nq1_Reddit,10 - October - Sales.xlsx,PP - Data,45,Reddit,1
+"Nq1_Google, Youtube",10 - October - Sales.xlsx,PP - Data,46,"Google, Youtube",21
+"Nq1_Yahoo, Bing",10 - October - Sales.xlsx,PP - Data,47,"Yahoo, Bing",1
+Nq2_I saw an ad,10 - October - Sales.xlsx,PP - Data,59,I saw an ad,26
+Nq2_I saw a post about Bird Buddy on my friend's feed,10 - October - Sales.xlsx,PP - Data,60,I saw a post about Bird Buddy on my friend's feed,7
+Nq2_I saw an organic post from Bird Buddy,10 - October - Sales.xlsx,PP - Data,61,I saw an organic post from Bird Buddy,13
+Oq3_Just me,10 - October - Sales.xlsx,PP - Data,71,Just me,25
+Oq3_My parents,10 - October - Sales.xlsx,PP - Data,72,My parents,21
+Oq3_Spouse,10 - October - Sales.xlsx,PP - Data,73,Spouse,25
+Oq3_I will use with my family,10 - October - Sales.xlsx,PP - Data,74,I will use with my family,29
+Oq1_Facebook / Instagram,10 - October - Sales.xlsx,PP - Data,82,Facebook / Instagram,27
+Oq1_Friends / Family,10 - October - Sales.xlsx,PP - Data,83,Friends / Family,31
+Oq1_TikTok,10 - October - Sales.xlsx,PP - Data,84,TikTok,1
+Oq1_TV / Radio,10 - October - Sales.xlsx,PP - Data,85,TV / Radio,9
+Oq1_Blog / Article,10 - October - Sales.xlsx,PP - Data,86,Blog / Article,20
+Oq1_Reddit,10 - October - Sales.xlsx,PP - Data,87,Reddit,5
+"Oq1_Google, Youtube",10 - October - Sales.xlsx,PP - Data,88,"Google, Youtube",20
+"Oq1_Yahoo, Bing",10 - October - Sales.xlsx,PP - Data,89,"Yahoo, Bing",3
+Oq2_I saw an ad,10 - October - Sales.xlsx,PP - Data,101,I saw an ad,25
+Oq2_I saw a post about Bird Buddy on my friend's feed,10 - October - Sales.xlsx,PP - Data,102,I saw a post about Bird Buddy on my friend's feed,15
+Oq2_I saw an organic post from Bird Buddy,10 - October - Sales.xlsx,PP - Data,103,I saw an organic post from Bird Buddy,19
+q5_Yes,10 - October - Sales.xlsx,PP - Data,3,Yes,31
+q5_No,10 - October - Sales.xlsx,PP - Data,4,No,31
+q6_Yes,10 - October - Sales.xlsx,PP - Data,11,Yes,31
+q6_No,10 - October - Sales.xlsx,PP - Data,12,No,31
+q1_Facebook / Instagram,10 - October - Sales.xlsx,PP - Data,new + existing,Nq1_Facebook / Instagram + Oq1_Facebook / Instagram,31
+q1_Friends / Family,10 - October - Sales.xlsx,PP - Data,new + existing,Nq1_Friends / Family + Oq1_Friends / Family,31
+q1_TikTok,10 - October - Sales.xlsx,PP - Data,new + existing,Nq1_TikTok + Oq1_TikTok,6
+q1_TV / Radio,10 - October - Sales.xlsx,PP - Data,new + existing,Nq1_TV / Radio + Oq1_TV / Radio,16
+q1_Blog / Article,10 - October - Sales.xlsx,PP - Data,new + existing,Nq1_Blog / Article + Oq1_Blog / Article,23
+q1_Reddit,10 - October - Sales.xlsx,PP - Data,new + existing,Nq1_Reddit + Oq1_Reddit,6
+"q1_Google, Youtube",10 - October - Sales.xlsx,PP - Data,new + existing,"Nq1_Google, Youtube + Oq1_Google, Youtube",24
+"q1_Yahoo, Bing",10 - October - Sales.xlsx,PP - Data,new + existing,"Nq1_Yahoo, Bing + Oq1_Yahoo, Bing",3
+q2_I saw an ad,10 - October - Sales.xlsx,PP - Data,new + existing,Nq2_I saw an ad + Oq2_I saw an ad,30
+q2_I saw a post about Bird Buddy on my friend's feed,10 - October - Sales.xlsx,PP - Data,new + existing,Nq2_I saw a post about Bird Buddy on my friend's feed + Oq2_I saw a post about Bird Buddy on my friend's feed,17
+q2_I saw an organic post from Bird Buddy,10 - October - Sales.xlsx,PP - Data,new + existing,Nq2_I saw an organic post from Bird Buddy + Oq2_I saw an organic post from Bird Buddy,22
+q3_Just me,10 - October - Sales.xlsx,PP - Data,new + existing,Nq3_Just me + Oq3_Just me,28
+q3_My parents,10 - October - Sales.xlsx,PP - Data,new + existing,Nq3_My parents + Oq3_My parents,29
+q3_Spouse,10 - October - Sales.xlsx,PP - Data,new + existing,Nq3_Spouse + Oq3_Spouse,31
+q3_I will use with my family,10 - October - Sales.xlsx,PP - Data,new + existing,Nq3_I will use with my family + Oq3_I will use with my family,30
+q0_participants,10 - October - Sales.xlsx,PP - Data,19 + 20,New customer + Existing customer,31

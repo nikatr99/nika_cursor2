@@ -1,0 +1,267 @@
+"target_column","source_workbook","source_detail","source_labels","november_total"
+"DTC_Revenue","11 - November24 - Sales.xlsx","Summary rows 9","DTC Revenue",11086892.87768
+"DTC_US_Revenue","11 - November24 - Sales.xlsx","Summary rows 10","- DTC Revenue US&CA",10558988.28
+"DTC_EU_Revenue","11 - November24 - Sales.xlsx","Summary rows 18","- DTC Revenue EU",527904.59783
+"DTC_Total_Revenue","11 - November24 - Sales.xlsx","Summary rows 9","DTC Revenue",11086892.87768
+"DTC_US_Hardware","11 - November24 - Sales.xlsx","Summary rows 11","   - Hardware",8321257.02
+"DTC_EU_Hardware","11 - November24 - Sales.xlsx","Summary rows 19","   - Hardware",375187.964257
+"DTC_Hardware","11 - November24 - Sales.xlsx","Summary rows 11 + 19","   - Hardware +    - Hardware",8696444.984257
+"DTC_Total_Hardware","11 - November24 - Sales.xlsx","Summary rows 11 + 19","   - Hardware +    - Hardware",8696444.984257
+"DTC_US_Addons","11 - November24 - Sales.xlsx","Summary rows 12","   - Add-ons",547624.19
+"DTC_EU_Addons","11 - November24 - Sales.xlsx","Summary rows 20","   - Add-ons",19371.175824
+"DTC_Addons","11 - November24 - Sales.xlsx","Summary rows 12 + 20","   - Add-ons +    - Add-ons",566995.365824
+"DTC_Total_Addons","11 - November24 - Sales.xlsx","Summary rows 12 + 20","   - Add-ons +    - Add-ons",566995.365824
+"DTC_US_Merch","11 - November24 - Sales.xlsx","Summary rows 13","   - Merch",339.9
+"DTC_EU_Merch","11 - November24 - Sales.xlsx","Summary rows 21","   - Merch",0
+"DTC_Merch","11 - November24 - Sales.xlsx","Summary rows 13 + 21","   - Merch +    - Merch",339.9
+"DTC_Total_Merch","11 - November24 - Sales.xlsx","Summary rows 13 + 21","   - Merch +    - Merch",339.9
+"DTC_US_Seeds","11 - November24 - Sales.xlsx","Summary rows 14","   - Seeds",23371.37
+"DTC_EU_Seeds","11 - November24 - Sales.xlsx","Summary rows 22","   - Seeds",0
+"DTC_Seeds","11 - November24 - Sales.xlsx","Summary rows 14 + 22","   - Seeds +    - Seeds",23371.37
+"DTC_Total_Seeds","11 - November24 - Sales.xlsx","Summary rows 14 + 22","   - Seeds +    - Seeds",23371.37
+"DTC_US_Subscription","11 - November24 - Sales.xlsx","Summary rows 15","   - Yearly Pro Subscription",20036.66
+"DTC_EU_Subscription","11 - November24 - Sales.xlsx","Summary rows 23","   - Yearly Pro Subscription",364.380158
+"DTC_Subscription","11 - November24 - Sales.xlsx","Summary rows 15 + 23","   - Yearly Pro Subscription +    - Yearly Pro Subscription",20401.040158
+"DTC_Total_Subscription","11 - November24 - Sales.xlsx","Summary rows 15 + 23","   - Yearly Pro Subscription +    - Yearly Pro Subscription",20401.040158
+"DTC_US_Taxes","11 - November24 - Sales.xlsx","Summary rows 16","   - Taxes",656453.21
+"DTC_EU_Taxes","11 - November24 - Sales.xlsx","Summary rows 24","   - Taxes",82849.873092
+"DTC_Taxes","11 - November24 - Sales.xlsx","Summary rows 16 + 24","   - Taxes +    - Taxes",739303.083092
+"DTC_Total_Taxes","11 - November24 - Sales.xlsx","Summary rows 16 + 24","   - Taxes +    - Taxes",739303.083092
+"DTC_US_Shipping","11 - November24 - Sales.xlsx","Summary rows 17","   - Shipping",989905.93
+"DTC_EU_Shipping","11 - November24 - Sales.xlsx","Summary rows 25","   - Shipping",50131.2045
+"DTC_Shipping","11 - November24 - Sales.xlsx","Summary rows 17 + 25","   - Shipping +    - Shipping",1040037.1345
+"DTC_Total_Shipping","11 - November24 - Sales.xlsx","Summary rows 17 + 25","   - Shipping +    - Shipping",1040037.1345
+"Amazon_Revenue","11 - November24 - Sales.xlsx","Summary rows 26","Amazon Revenue",7221507.16
+"Amazon_Hardware","11 - November24 - Sales.xlsx","Summary rows 27","   - Hardware",6646209.66
+"Amazon_Addons","11 - November24 - Sales.xlsx","Summary rows 28","   - Add-ons",99516.03
+"Amazon_Tax","11 - November24 - Sales.xlsx","Summary rows 29","   - Tax",469092.85
+"Amazon_Shipping","11 - November24 - Sales.xlsx","Summary rows 30","   - Shipping",2228.82
+"Amazon_GiftWrap","11 - November24 - Sales.xlsx","Summary rows 31","   - Gift Wrap",4459.8
+"Walmart_Revenue","11 - November24 - Sales.xlsx","Summary rows 32","Walmart Revenue",25838.99
+"Digital_Marketplaces_Revenue","11 - November24 - Sales.xlsx","Summary rows 36","Digital Marketplaces Revenue",20268.97203
+"Rachio_Revenue","11 - November24 - Sales.xlsx","Summary rows 37","Rachio",17448.83223
+"Weatherflow_Revenue","11 - November24 - Sales.xlsx","Summary rows 41","Weatherflow",2820.1398
+"Total_Revenue","11 - November24 - Sales.xlsx","Summary rows 49","Total Revenue",18328669.00937
+"B2B_Revenue","11 - November24 - Sales.xlsx","Summary rows 60","B2B section Total Revenue",519815.802432
+"BestBuy_Revenue","11 - November24 - Sales.xlsx","Summary rows 52","Best Buy",125275.672798
+"Target_Revenue","11 - November24 - Sales.xlsx","Summary rows 56","Target",287114.007
+"App_Revenue","11 - November24 - Sales.xlsx","Summary rows 67","App section Total Revenue",101351.004295
+"Google_Store","11 - November24 - Sales.xlsx","Summary rows 63","  - Google Store",16071.0775
+"Apple_Store","11 - November24 - Sales.xlsx","Summary rows 64","  - Apple Store",57710.6980077
+"App_Comission","11 - November24 - Sales.xlsx","Summary rows 65","  - Comission",27569.2287888
+"App_Tax","11 - November24 - Sales.xlsx","Summary rows 66","  - Tax",0
+"DTC_Orders","11 - November24 - Sales.xlsx","Summary rows 70","DTC Orders",41165
+"DTC_US_Orders","11 - November24 - Sales.xlsx","Summary rows 71","- DTC Orders US&CA",39238
+"DTC_EU_Orders","11 - November24 - Sales.xlsx","Summary rows 77","- DTC Orders EUROPE",1927
+"DTC_Total_Orders","11 - November24 - Sales.xlsx","Summary rows 70","DTC Orders",41165
+"DTC_US_Hardware_Units","11 - November24 - Sales.xlsx","Summary rows 72","   - Hardware (units sold)",39321
+"DTC_EU_Hardware_Units","11 - November24 - Sales.xlsx","Summary rows 78","   - Hardware (units sold)",1845
+"DTC_Hardware_Units","11 - November24 - Sales.xlsx","Summary rows 72 + 78","   - Hardware (units sold) +    - Hardware (units sold)",41166
+"DTC_Total_Hardware_Units","11 - November24 - Sales.xlsx","Summary rows 72 + 78","   - Hardware (units sold) +    - Hardware (units sold)",41166
+"DTC_US_Addons_Units","11 - November24 - Sales.xlsx","Summary rows 73","   - Add-ons (units sold)",43372
+"DTC_EU_Addons_Units","11 - November24 - Sales.xlsx","Summary rows 79","   - Add-ons (units sold)",1883
+"DTC_Addons_Units","11 - November24 - Sales.xlsx","Summary rows 73 + 79","   - Add-ons (units sold) +    - Add-ons (units sold)",45255
+"DTC_Total_Addons_Units","11 - November24 - Sales.xlsx","Summary rows 73 + 79","   - Add-ons (units sold) +    - Add-ons (units sold)",45255
+"DTC_US_Merch_Units","11 - November24 - Sales.xlsx","Summary rows 74","   - Merch (units sold)",10
+"DTC_EU_Merch_Units","11 - November24 - Sales.xlsx","Summary rows 80","   - Merch (units sold)",0
+"DTC_Merch_Units","11 - November24 - Sales.xlsx","Summary rows 74 + 80","   - Merch (units sold) +    - Merch (units sold)",10
+"DTC_Total_Merch_Units","11 - November24 - Sales.xlsx","Summary rows 74 + 80","   - Merch (units sold) +    - Merch (units sold)",10
+"DTC_US_Seeds_Units","11 - November24 - Sales.xlsx","Summary rows 75","   - Seeds (units sold)",899
+"DTC_EU_Seeds_Units","11 - November24 - Sales.xlsx","Summary rows 81","   - Seeds (units sold)",0
+"DTC_Seeds_Units","11 - November24 - Sales.xlsx","Summary rows 75 + 81","   - Seeds (units sold) +    - Seeds (units sold)",899
+"DTC_Total_Seeds_Units","11 - November24 - Sales.xlsx","Summary rows 75 + 81","   - Seeds (units sold) +    - Seeds (units sold)",899
+"DTC_US_Subscription_Units","11 - November24 - Sales.xlsx","Summary rows 76","   - BB 1 year Pro Subscription",19760
+"DTC_EU_Subscription_Units","11 - November24 - Sales.xlsx","Summary rows 82","   - BB 1 year Pro Subscription",566
+"DTC_Subscription_Units","11 - November24 - Sales.xlsx","Summary rows 76 + 82","   - BB 1 year Pro Subscription +    - BB 1 year Pro Subscription",20326
+"DTC_Total_Subscription_Units","11 - November24 - Sales.xlsx","Summary rows 76 + 82","   - BB 1 year Pro Subscription +    - BB 1 year Pro Subscription",20326
+"Amazon_Orders","11 - November24 - Sales.xlsx","Summary rows 83","Amazon Orders",32773
+"Amazon_Hardware_Units","11 - November24 - Sales.xlsx","Summary rows 84","   - Hardware (units sold)",30809
+"Amazon_Addons_Units","11 - November24 - Sales.xlsx","Summary rows 85","   - Add-ons (units sold)",3640
+"Walmart_Orders","11 - November24 - Sales.xlsx","Summary rows 86","Walmart Orders",122
+"Digital_Marketplaces_Orders","11 - November24 - Sales.xlsx","Summary rows 89","Digital Marketplaces Orders",66
+"Rachio_Orders","11 - November24 - Sales.xlsx","Summary rows 90","Rachio Orders",55
+"Weatherflow_Orders","11 - November24 - Sales.xlsx","Summary rows 91","Weatherflow Orders",11
+"Total_Orders","11 - November24 - Sales.xlsx","Summary rows 93","Total Orders",74004
+"B2B_Orders","11 - November24 - Sales.xlsx","Summary rows 98","B2B section Total Orders",2234
+"BestBuy_Orders","11 - November24 - Sales.xlsx","Summary rows 96","Best Buy",570
+"Target_Orders","11 - November24 - Sales.xlsx","Summary rows 97","Target",1292
+"App_Orders","11 - November24 - Sales.xlsx","Summary rows 103","App section Total Orders",5402
+"Google_Store_Orders","11 - November24 - Sales.xlsx","Summary rows 101","  - Google Store",941
+"Apple_Store_Orders","11 - November24 - Sales.xlsx","Summary rows 102","  - Apple Store",4461
+"Meta_Spend","11 - November24 - Sales.xlsx","Summary rows 107","Meta Spend",5282884.21307
+"Meta_Spend_US","11 - November24 - Sales.xlsx","Summary rows 108","- Meta US",5058181.65045
+"Meta_Spend_EU","11 - November24 - Sales.xlsx","Summary rows 109","- Meta EU",224702.562782
+"Google_Spend","11 - November24 - Sales.xlsx","Summary rows 110","Google Spend",339851.33
+"Google_Spend_US","11 - November24 - Sales.xlsx","Summary rows 111","- Google Spend US",326865.39
+"Google_Spend_EU","11 - November24 - Sales.xlsx","Summary rows 112","- Google Spend EU",12985.94
+"Bing_Spend","11 - November24 - Sales.xlsx","Summary rows 113","Bing Spend",7011.55
+"TikTok_Spend","11 - November24 - Sales.xlsx","Summary rows 114","TikTok Spend",26558.58
+"Amazon_Spend","11 - November24 - Sales.xlsx","Summary rows 115","Amazon Spend",1014693
+"Nextdoor_Spend","11 - November24 - Sales.xlsx","Summary rows 116","Nextdoor Spend",0
+"Affiliate_Fees","11 - November24 - Sales.xlsx","DTC - P&L rows 30","Affiliate Fee (20%)",0
+"Rachio_Fees","11 - November24 - Sales.xlsx","Summary rows 119","Rachio Fees",2966.30147918
+"Weatherflow_Fees","11 - November24 - Sales.xlsx","Summary rows 120","Weatherflow Fees",423.02097
+"Fees","11 - November24 - Sales.xlsx","DTC - P&L row 30 + Summary rows 119 + 120","Affiliate Fee + Rachio Fees + Weatherflow Fees",3389.32244918
+"Total_DTC_Spend","11 - November24 - Sales.xlsx","Summary rows 123","Total DTC Spend",5657161.71307
+"DTC_US_Spend","11 - November24 - Sales.xlsx","Summary rows 124","- DTC Spend US",5418617.17045
+"DTC_EU_Spend","11 - November24 - Sales.xlsx","Summary rows 125","- DTC Spend EU",237688.502782
+"DTC_Total_Spend","11 - November24 - Sales.xlsx","Summary rows 123","Total DTC Spend",5657161.71307
+"Total_Spend","11 - November24 - Sales.xlsx","Summary rows 126","Total Spend",6680815.98536
+"App_Spend_Meta","11 - November24 - Sales.xlsx","Summary rows 129","Meta Spend",0
+"App_Spend_Apple","11 - November24 - Sales.xlsx","Summary rows 130","Apple Spend",0
+"App_Spend_Google","11 - November24 - Sales.xlsx","Summary rows 131","Google Spend",0
+"Total_App_Spend","11 - November24 - Sales.xlsx","Summary rows 132","Total APP Spend",0
+"Blended_ROAS","11 - November24 - Sales.xlsx","Summary rows 134","Blended ROAS",72.024000719
+"wROAS","11 - November24 - Sales.xlsx","Summary rows 135","wROAS",57.682938478
+"aROAS","11 - November24 - Sales.xlsx","Summary rows 138","aROAS",161.853912878
+"appROAS","11 - November24 - Sales.xlsx","Summary rows 139","appROAS",0
+"Blended_SPU","11 - November24 - Sales.xlsx","Summary rows 141","Blended Spend per Unit",3585.44824132
+"wSPU","11 - November24 - Sales.xlsx","Summary rows 142","wSPU",4540.04740821
+"aSPU","11 - November24 - Sales.xlsx","Summary rows 145","aSPU",1612.18288103
+"appSPU","11 - November24 - Sales.xlsx","computed Total_App_Spend / App_Orders","computed",0
+"Web_CR","11 - November24 - Sales.xlsx","Summary rows 148","Web CR",0.392
+"Web_CR_US","11 - November24 - Sales.xlsx","Summary rows 149","- Web CR US",0.4226
+"Web_CR_EU","11 - November24 - Sales.xlsx","Summary rows 150","- Web CR EU",0.2146
+"Web_AOV","11 - November24 - Sales.xlsx","Summary rows 151","Web AOV",8130.2267853
+"Web_AOV_US","11 - November24 - Sales.xlsx","Summary rows 152","- Web AOV US",8096.6903682
+"Web_AOV_EU","11 - November24 - Sales.xlsx","Summary rows 153","- Web AOV EU",8339.8500971
+"fAOV","11 - November24 - Sales.xlsx","Summary rows 154","fAOV",8523.6224386
+"fAOV_US","11 - November24 - Sales.xlsx","Summary rows 155","- fAOV US",8534.88
+"fAOV_EU","11 - November24 - Sales.xlsx","Summary rows 156","- fAOV EU",8423.251048
+"rAOV","11 - November24 - Sales.xlsx","Summary rows 157","rAOV",4228.80168834
+"rAOV_US","11 - November24 - Sales.xlsx","Summary rows 158","- rAOV US",4252.17
+"rAOV_EU","11 - November24 - Sales.xlsx","Summary rows 159","- rAOV EU",2718.127078
+"Returning_Customers","11 - November24 - Sales.xlsx","Summary rows 165","Returning",2.33777595269
+"Returning_Customers_US","11 - November24 - Sales.xlsx","Summary rows 166","- Returning US",2.541
+"Returning_Customers_EU","11 - November24 - Sales.xlsx","Summary rows 167","- Returning EU",0.752
+"First_Time_Customers","11 - November24 - Sales.xlsx","Summary rows 168","First-time",27.662224047
+"First_Time_Customers_US","11 - November24 - Sales.xlsx","Summary rows 169","- First-time US",27.459
+"First_Time_Customers_EU","11 - November24 - Sales.xlsx","Summary rows 170","- First-time EU",29.248
+"dtc_us_SKU 1 - Blue","11 - November24 - Sales.xlsx","DTC US&CA - P&L rows 23","SKU 1 - Blue",4258
+"dtc_eu_SKU 1 - Blue","11 - November24 - Sales.xlsx","DTC EU - P&L rows 23","SKU 1 - Blue",86
+"dtc_SKU 1 - Blue","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 23 + DTC EU - P&L row 23","SKU 1 - Blue + SKU 1 - Blue",4344
+"dtc_us_SKU 2 - Yellow","11 - November24 - Sales.xlsx","DTC US&CA - P&L rows 24","SKU 2 - Yellow",2
+"dtc_eu_SKU 2 - Yellow","11 - November24 - Sales.xlsx","DTC EU - P&L rows 24","SKU 2 - Yellow",0
+"dtc_SKU 2 - Yellow","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 24 + DTC EU - P&L row 24","SKU 2 - Yellow + SKU 2 - Yellow",2
+"dtc_us_SKU 3 - Blue w/ Solar","11 - November24 - Sales.xlsx","DTC US&CA - P&L rows 25","SKU 3 - Blue w/ Solar",6240
+"dtc_eu_SKU 3 - Blue w/ Solar","11 - November24 - Sales.xlsx","DTC EU - P&L rows 25","SKU 3 - Blue w/ Solar",0
+"dtc_SKU 3 - Blue w/ Solar","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 25 + DTC EU - P&L row 25","SKU 3 - Blue w/ Solar + SKU 3 - Blue w/ Solar",6240
+"dtc_us_SKU 4 - Yellow w/ Solar","11 - November24 - Sales.xlsx","DTC US&CA - P&L rows 26","SKU 4 - Yellow w/ Solar",2315
+"dtc_eu_SKU 4 - Yellow w/ Solar","11 - November24 - Sales.xlsx","DTC EU - P&L rows 26","SKU 4 - Yellow w/ Solar",0
+"dtc_SKU 4 - Yellow w/ Solar","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 26 + DTC EU - P&L row 26","SKU 4 - Yellow w/ Solar + SKU 4 - Yellow w/ Solar",2315
+"dtc_us_SKU 5 - HBF","11 - November24 - Sales.xlsx","DTC US&CA - P&L rows 33","SKU 5 - HBF",777
+"dtc_eu_SKU 5 - HBF","11 - November24 - Sales.xlsx","DTC EU - P&L rows 33","SKU 5 - HBF",0
+"dtc_SKU 5 - HBF","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 33 + DTC EU - P&L row 33","SKU 5 - HBF + SKU 5 - HBF",777
+"dtc_us_SKU 6 - HBF w/ Solar","11 - November24 - Sales.xlsx","DTC US&CA - P&L rows 34","SKU 6 - HBF w/ Solar",1871
+"dtc_eu_SKU 6 - HBF w/ Solar","11 - November24 - Sales.xlsx","DTC EU - P&L rows 34","SKU 6 - HBF w/ Solar",0
+"dtc_SKU 6 - HBF w/ Solar","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 34 + DTC EU - P&L row 34","SKU 6 - HBF w/ Solar + SKU 6 - HBF w/ Solar",1871
+"dtc_us_Wall Mount","11 - November24 - Sales.xlsx","DTC US&CA - P&L rows 37","Wall Mount",19061
+"dtc_eu_Wall Mount","11 - November24 - Sales.xlsx","DTC EU - P&L rows 37","Wall Mount",328
+"dtc_Wall Mount","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 37 + DTC EU - P&L row 37","Wall Mount + Wall Mount",19389
+"dtc_us_Suet Ball Holder","11 - November24 - Sales.xlsx","DTC US&CA - P&L rows 38","Suet Ball Holder",8357
+"dtc_eu_Suet Ball Holder","11 - November24 - Sales.xlsx","DTC EU - P&L rows 38","Suet Ball Holder",1119
+"dtc_Suet Ball Holder","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 38 + DTC EU - P&L row 38","Suet Ball Holder + Suet Ball Holder",9476
+"dtc_us_3-in-1 Nutrition Set - Blue","11 - November24 - Sales.xlsx","DTC US&CA - P&L rows 39","3-in-1 Nutrition Set - Blue",5175
+"dtc_eu_3-in-1 Nutrition Set - Blue","11 - November24 - Sales.xlsx","DTC EU - P&L rows 39","3-in-1 Nutrition Set - Blue",124
+"dtc_3-in-1 Nutrition Set - Blue","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 39 + DTC EU - P&L row 39","3-in-1 Nutrition Set - Blue + 3-in-1 Nutrition Set - Blue",5299
+"dtc_us_3-in-1 Nutrition Set - Yellow","11 - November24 - Sales.xlsx","DTC US&CA - P&L rows 40","3-in-1 Nutrition Set - Yellow",111
+"dtc_eu_3-in-1 Nutrition Set - Yellow","11 - November24 - Sales.xlsx","DTC EU - P&L rows 40","3-in-1 Nutrition Set - Yellow",15
+"dtc_3-in-1 Nutrition Set - Yellow","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 40 + DTC EU - P&L row 40","3-in-1 Nutrition Set - Yellow + 3-in-1 Nutrition Set - Yellow",126
+"dtc_us_Solar Roof Single - Blue","11 - November24 - Sales.xlsx","DTC US&CA - P&L rows 41","Solar Roof Single - Blue",812
+"dtc_eu_Solar Roof Single - Blue","11 - November24 - Sales.xlsx","DTC EU - P&L rows 41","Solar Roof Single - Blue",0
+"dtc_Solar Roof Single - Blue","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 41 + DTC EU - P&L row 41","Solar Roof Single - Blue + Solar Roof Single - Blue",812
+"dtc_us_Solar Roof Single - Yellow","11 - November24 - Sales.xlsx","DTC US&CA - P&L rows 42","Solar Roof Single - Yellow",71
+"dtc_eu_Solar Roof Single - Yellow","11 - November24 - Sales.xlsx","DTC EU - P&L rows 42","Solar Roof Single - Yellow",31
+"dtc_Solar Roof Single - Yellow","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 42 + DTC EU - P&L row 42","Solar Roof Single - Yellow + Solar Roof Single - Yellow",102
+"dtc_us_Perch Extender - Blue","11 - November24 - Sales.xlsx","DTC US&CA - P&L rows 43","Perch Extender - Blue",8905
+"dtc_eu_Perch Extender - Blue","11 - November24 - Sales.xlsx","DTC EU - P&L rows 43","Perch Extender - Blue",229
+"dtc_Perch Extender - Blue","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 43 + DTC EU - P&L row 43","Perch Extender - Blue + Perch Extender - Blue",9134
+"dtc_us_Perch Extender - Yellow","11 - November24 - Sales.xlsx","DTC US&CA - P&L rows 44","Perch Extender - Yellow",400
+"dtc_eu_Perch Extender - Yellow","11 - November24 - Sales.xlsx","DTC EU - P&L rows 44","Perch Extender - Yellow",37
+"dtc_Perch Extender - Yellow","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 44 + DTC EU - P&L row 44","Perch Extender - Yellow + Perch Extender - Yellow",437
+"dtc_us_Solar Roof (HBF)","11 - November24 - Sales.xlsx","DTC US&CA - P&L rows 45","Solar Roof (HBF)",141
+"dtc_eu_Solar Roof (HBF)","11 - November24 - Sales.xlsx","DTC EU - P&L rows 45","Solar Roof (HBF)",0
+"dtc_Solar Roof (HBF)","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 45 + DTC EU - P&L row 45","Solar Roof (HBF) + Solar Roof (HBF)",141
+"dtc_us_Housing - only (HBF)","11 - November24 - Sales.xlsx","DTC US&CA - P&L rows 46","Housing - only (HBF)",55
+"dtc_eu_Housing - only (HBF)","11 - November24 - Sales.xlsx","DTC EU - P&L rows 46","Housing - only (HBF)",0
+"dtc_Housing - only (HBF)","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 46 + DTC EU - P&L row 46","Housing - only (HBF) + Housing - only (HBF)",55
+"dtc_us_Seasonal Curation - 8lb","11 - November24 - Sales.xlsx","DTC US&CA - P&L rows 50","Seasonal Curation - 8lb",440
+"dtc_eu_Seasonal Curation - 8lb","11 - November24 - Sales.xlsx","DTC EU - P&L rows 50","Seasonal Curation - 8lb",0
+"dtc_Seasonal Curation - 8lb","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 50 + DTC EU - P&L row 50","Seasonal Curation - 8lb + Seasonal Curation - 8lb",440
+"dtc_us_Seasonal Curation - 20lb","11 - November24 - Sales.xlsx","DTC US&CA - P&L rows 51","Seasonal Curation - 20lb",27
+"dtc_eu_Seasonal Curation - 20lb","11 - November24 - Sales.xlsx","DTC EU - P&L rows 51","Seasonal Curation - 20lb",0
+"dtc_Seasonal Curation - 20lb","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 51 + DTC EU - P&L row 51","Seasonal Curation - 20lb + Seasonal Curation - 20lb",27
+"dtc_us_Buddy Bites - 8lb","11 - November24 - Sales.xlsx","DTC US&CA - P&L rows 52","Buddy Bites - 8lb",125
+"dtc_eu_Buddy Bites - 8lb","11 - November24 - Sales.xlsx","DTC EU - P&L rows 52","Buddy Bites - 8lb",0
+"dtc_Buddy Bites - 8lb","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 52 + DTC EU - P&L row 52","Buddy Bites - 8lb + Buddy Bites - 8lb",125
+"dtc_us_Buddy Bites - 20lb","11 - November24 - Sales.xlsx","DTC US&CA - P&L rows 53","Buddy Bites - 20lb",9
+"dtc_eu_Buddy Bites - 20lb","11 - November24 - Sales.xlsx","DTC EU - P&L rows 53","Buddy Bites - 20lb",0
+"dtc_Buddy Bites - 20lb","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 53 + DTC EU - P&L row 53","Buddy Bites - 20lb + Buddy Bites - 20lb",9
+"dtc_us_Snack n' Soar - 8lb","11 - November24 - Sales.xlsx","DTC US&CA - P&L rows 54","Snack n' Soar - 8lb",125
+"dtc_eu_Snack n' Soar - 8lb","11 - November24 - Sales.xlsx","DTC EU - P&L rows 54","Snack n' Soar - 8lb",0
+"dtc_Snack n' Soar - 8lb","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 54 + DTC EU - P&L row 54","Snack n' Soar - 8lb + Snack n' Soar - 8lb",125
+"dtc_us_Snack n' Soar - 20lb","11 - November24 - Sales.xlsx","DTC US&CA - P&L rows 55","Snack n' Soar - 20lb",22
+"dtc_eu_Snack n' Soar - 20lb","11 - November24 - Sales.xlsx","DTC EU - P&L rows 55","Snack n' Soar - 20lb",0
+"dtc_Snack n' Soar - 20lb","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 55 + DTC EU - P&L row 55","Snack n' Soar - 20lb + Snack n' Soar - 20lb",22
+"dtc_us_Avian Choice - 8lb","11 - November24 - Sales.xlsx","DTC US&CA - P&L rows 56","Avian Choice - 8lb",139
+"dtc_eu_Avian Choice - 8lb","11 - November24 - Sales.xlsx","DTC EU - P&L rows 56","Avian Choice - 8lb",0
+"dtc_Avian Choice - 8lb","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 56 + DTC EU - P&L row 56","Avian Choice - 8lb + Avian Choice - 8lb",139
+"dtc_us_Avian Choice - 20lb","11 - November24 - Sales.xlsx","DTC US&CA - P&L rows 57","Avian Choice - 20lb",12
+"dtc_eu_Avian Choice - 20lb","11 - November24 - Sales.xlsx","DTC EU - P&L rows 57","Avian Choice - 20lb",0
+"dtc_Avian Choice - 20lb","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 57 + DTC EU - P&L row 57","Avian Choice - 20lb + Avian Choice - 20lb",12
+"amazon_SKU 1 - Blue","11 - November24 - Sales.xlsx","AMAZON - P&L rows 28","SKU 1 - Blue",2321
+"amazon_SKU 2 - Yellow","11 - November24 - Sales.xlsx","AMAZON - P&L rows 29","SKU 2 - Yellow",0
+"amazon_SKU 3 - Blue w/ Solar","11 - November24 - Sales.xlsx","AMAZON - P&L rows 30","SKU 3 - Blue w/ Solar",16245
+"amazon_SKU 4 - Yellow w/ Solar","11 - November24 - Sales.xlsx","AMAZON - P&L rows 31","SKU 4 - Yellow w/ Solar",1105
+"amazon_Wall Mount","11 - November24 - Sales.xlsx","AMAZON - P&L rows 42","Wall Mount",1645
+"amazon_Suet Ball Holder","11 - November24 - Sales.xlsx","AMAZON - P&L rows 43","Suet Ball Holder",457
+"amazon_3-in-1 Nutrition Set - Blue","11 - November24 - Sales.xlsx","AMAZON - P&L rows 44","3-in-1 Nutrition Set - Blue",427
+"amazon_3-in-1 Nutrition Set - Yellow","11 - November24 - Sales.xlsx","AMAZON - P&L rows 45","3-in-1 Nutrition Set - Yellow",0
+"amazon_Solar Roof Single - Blue","11 - November24 - Sales.xlsx","AMAZON - P&L rows 46","Solar Roof Single - Blue",0
+"amazon_Solar Roof Single - Yellow","11 - November24 - Sales.xlsx","AMAZON - P&L rows 47","Solar Roof Single - Yellow",0
+"amazon_Perch Extender - Blue","11 - November24 - Sales.xlsx","AMAZON - P&L rows 48","Perch Extender - Blue",1096
+"amazon_Perch Extender - Yellow","11 - November24 - Sales.xlsx","AMAZON - P&L rows 49","Perch Extender - Yellow",0
+"walmart_SKU 1 - Blue","11 - November24 - Sales.xlsx","WALMART - P&L rows 15","SKU 1 - Blue",50
+"walmart_SKU 2 - Yellow","11 - November24 - Sales.xlsx","WALMART - P&L rows 16","SKU 2 - Yellow",0
+"walmart_SKU 3 - Blue w/ Solar","11 - November24 - Sales.xlsx","WALMART - P&L rows 17","SKU 3 - Blue w/ Solar",70
+"walmart_SKU 4 - Yellow w/ Solar","11 - November24 - Sales.xlsx","WALMART - P&L rows 18","SKU 4 - Yellow w/ Solar",0
+"walmart_Wall Mount","11 - November24 - Sales.xlsx","WALMART - P&L rows 21","Wall Mount",1
+"walmart_Suet Ball Holder","11 - November24 - Sales.xlsx","WALMART - P&L rows 22","Suet Ball Holder",1
+"walmart_3-in-1 Nutrition Set - Blue","11 - November24 - Sales.xlsx","WALMART - P&L rows 23","3-in-1 Nutrition Set - Blue",0
+"walmart_3-in-1 Nutrition Set - Yellow","11 - November24 - Sales.xlsx","WALMART - P&L rows 24","3-in-1 Nutrition Set - Yellow",0
+"walmart_Solar Roof Single - Blue","11 - November24 - Sales.xlsx","WALMART - P&L rows 25","Solar Roof Single - Blue",0
+"walmart_Solar Roof Single - Yellow","11 - November24 - Sales.xlsx","WALMART - P&L rows 26","Solar Roof Single - Yellow",0
+"walmart_Perch Extender - Blue","11 - November24 - Sales.xlsx","WALMART - P&L rows 27","Perch Extender - Blue",0
+"walmart_Perch Extender - Yellow","11 - November24 - Sales.xlsx","WALMART - P&L rows 28","Perch Extender - Yellow",0
+"rachio_SKU 1 - Blue","11 - November24 - Sales.xlsx","Digital Marketplaces - P&L rows 13","SKU 1 - Blue",1
+"rachio_SKU 2 - Yellow","11 - November24 - Sales.xlsx","Digital Marketplaces - P&L rows 14","SKU 2 - Yellow",0
+"rachio_SKU 3 - Blue w/ Solar","11 - November24 - Sales.xlsx","Digital Marketplaces - P&L rows 15","SKU 3 - Blue w/ Solar",54
+"rachio_SKU 4 - Yellow w/ Solar","11 - November24 - Sales.xlsx","Digital Marketplaces - P&L rows 16","SKU 4 - Yellow w/ Solar",0
+"weatherflow_SKU 1 - Blue","11 - November24 - Sales.xlsx","Digital Marketplaces - P&L rows 125","SKU 1 - Blue",3
+"weatherflow_SKU 2 - Yellow","11 - November24 - Sales.xlsx","Digital Marketplaces - P&L rows 126","SKU 2 - Yellow",0
+"weatherflow_SKU 3 - Blue w/ Solar","11 - November24 - Sales.xlsx","Digital Marketplaces - P&L rows 127","SKU 3 - Blue w/ Solar",9
+"weatherflow_SKU 4 - Yellow w/ Solar","11 - November24 - Sales.xlsx","Digital Marketplaces - P&L rows 128","SKU 4 - Yellow w/ Solar",0
+"apple_yearly_sub","11 - November24 - Sales.xlsx","App - P&L rows 15","   - Yearly Subscription",1893
+"apple_monthly_sub","11 - November24 - Sales.xlsx","App - P&L rows 16","   - Monthly Subscription",2568
+"google_yearly_sub","11 - November24 - Sales.xlsx","App - P&L rows 18","   - Yearly Subscription",430
+"google_monthly_sub","11 - November24 - Sales.xlsx","App - P&L rows 19","   - Monthly Subscription",511
+"dtc_us_SKU 1 - Blue PRO","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 27","SKU 1 - Blue PRO",6051
+"dtc_eu_SKU 1 - Blue PRO","11 - November24 - Sales.xlsx","DTC EU - P&L row 27","SKU 1 - Blue PRO",479
+"dtc_SKU 1 - Blue PRO","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 27 + DTC EU - P&L row 27","SKU 1 - Blue PRO + SKU 1 - Blue PRO",6530
+"dtc_us_SKU 2 - Yellow PRO","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 28","SKU 2 - Yellow PRO",0
+"dtc_eu_SKU 2 - Yellow PRO","11 - November24 - Sales.xlsx","DTC EU - P&L row 28","SKU 2 - Yellow PRO",0
+"dtc_SKU 2 - Yellow PRO","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 28 + DTC EU - P&L row 28","SKU 2 - Yellow PRO + SKU 2 - Yellow PRO",0
+"dtc_us_SKU 3 - Blue w/ Solar PRO","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 29","SKU 3 - Blue w/ Solar PRO",17807
+"dtc_eu_SKU 3 - Blue w/ Solar PRO","11 - November24 - Sales.xlsx","DTC EU - P&L row 29","SKU 3 - Blue w/ Solar PRO",1280
+"dtc_SKU 3 - Blue w/ Solar PRO","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 29 + DTC EU - P&L row 29","SKU 3 - Blue w/ Solar PRO + SKU 3 - Blue w/ Solar PRO",19087
+"dtc_us_SKU 4 - Yellow w/ Solar PRO","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 30","SKU 4 - Yellow w/ Solar PRO",0
+"dtc_eu_SKU 4 - Yellow w/ Solar PRO","11 - November24 - Sales.xlsx","DTC EU - P&L row 30","SKU 4 - Yellow w/ Solar PRO",0
+"dtc_SKU 4 - Yellow w/ Solar PRO","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 30 + DTC EU - P&L row 30","SKU 4 - Yellow w/ Solar PRO + SKU 4 - Yellow w/ Solar PRO",0
+"dtc_us_Nature Cam PRO","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 47","Nature Cam PRO",284
+"dtc_eu_Nature Cam PRO","11 - November24 - Sales.xlsx","DTC EU - P&L row 47","Nature Cam PRO",0
+"dtc_Nature Cam PRO","11 - November24 - Sales.xlsx","DTC US&CA - P&L row 47 + DTC EU - P&L row 47","Nature Cam PRO + Nature Cam PRO",284
+"amazon_SKU 1 - Blue PRO","11 - November24 - Sales.xlsx","AMAZON - P&L row 32","SKU 1 - Blue PRO",262
+"amazon_SKU 2 - Yellow PRO","11 - November24 - Sales.xlsx","AMAZON - P&L row 33","SKU 2 - Yellow PRO",0
+"amazon_SKU 3 - Blue w/ Solar PRO","11 - November24 - Sales.xlsx","AMAZON - P&L row 34","SKU 3 - Blue w/ Solar PRO",9582
+"amazon_SKU 4 - Yellow w/ Solar PRO","11 - November24 - Sales.xlsx","AMAZON - P&L row 35","SKU 4 - Yellow w/ Solar PRO",0
+"amazon_Nature Cam PRO","11 - November24 - Sales.xlsx","AMAZON - P&L row 50","Nature Cam PRO",15

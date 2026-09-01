@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1247 800" role="img" aria-label="Nature Cam PRO">
+  <defs>
+    <linearGradient id="bodyFace" x1="450" y1="86" x2="710" y2="724" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f8f8f6"/>
+      <stop offset="0.42" stop-color="#e3e3e0"/>
+      <stop offset="1" stop-color="#cfcfcb"/>
+    </linearGradient>
+    <linearGradient id="bodySide" x1="700" y1="100" x2="812" y2="696" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ddddda"/>
+      <stop offset="1" stop-color="#b6b5b0"/>
+    </linearGradient>
+    <radialGradient id="lensOuter" cx="45%" cy="42%" r="64%">
+      <stop offset="0" stop-color="#5a5a57"/>
+      <stop offset="0.38" stop-color="#1d1d1c"/>
+      <stop offset="0.78" stop-color="#070707"/>
+      <stop offset="1" stop-color="#45443f"/>
+    </radialGradient>
+    <radialGradient id="lensGlass" cx="46%" cy="42%" r="58%">
+      <stop offset="0" stop-color="#4d4d4b"/>
+      <stop offset="0.45" stop-color="#171717"/>
+      <stop offset="1" stop-color="#050505"/>
+    </radialGradient>
+    <filter id="productShadow" x="-30%" y="-25%" width="160%" height="155%">
+      <feDropShadow dx="0" dy="24" stdDeviation="20" flood-color="#1b2a34" flood-opacity="0.18"/>
+    </filter>
+    <filter id="softInset" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="5" result="blur"/>
+      <feOffset dx="-8" dy="-7" result="offset"/>
+      <feComposite in="offset" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="inner"/>
+      <feColorMatrix in="inner" type="matrix" values="1 0 0 0 1 0 1 0 0 1 0 0 1 0 1 0 0 0 .24 0"/>
+      <feComposite in2="SourceGraphic" operator="over"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="623" cy="734" rx="205" ry="34" fill="#20313a" opacity="0.12"/>
+  <g filter="url(#productShadow)">
+    <path d="M612 62h82c68 0 123 55 123 123v394c0 76-61 137-137 137h-77c-75 0-136-61-136-136V207c0-80 65-145 145-145Z" fill="url(#bodySide)"/>
+    <path d="M568 54h88c75 0 136 61 136 136v382c0 79-64 143-143 143h-79c-81 0-146-65-146-146V198c0-80 64-144 144-144Z" fill="url(#bodyFace)" filter="url(#softInset)"/>
+    <path d="M558 82h84c58 0 106 48 106 106v373c0 62-50 112-112 112h-62c-65 0-117-52-117-117V191c0-60 43-109 101-109Z" fill="none" stroke="#fff" stroke-opacity="0.5" stroke-width="8"/>
+
+    <circle cx="568" cy="172" r="36" fill="#dededb" stroke="#aaa9a5" stroke-width="7"/>
+    <circle cx="571" cy="172" r="25" fill="#f1f1ef" stroke="#c9c9c4" stroke-width="3"/>
+    <circle cx="641" cy="97" r="8" fill="#151515"/>
+    <circle cx="637" cy="357" r="54" fill="#cacac6" opacity="0.48"/>
+    <path d="M620 326c16 0 28 10 30 25 14 5 24 17 24 33 0 20-16 35-37 35h-26c-24 0-43-19-43-43 0-18 12-34 30-40 5-7 13-10 22-10Z" fill="#eeeeec" opacity="0.58"/>
+    <circle cx="633" cy="397" r="9" fill="#161616"/>
+
+    <circle cx="631" cy="573" r="118" fill="url(#lensOuter)"/>
+    <circle cx="631" cy="573" r="82" fill="#111"/>
+    <circle cx="631" cy="573" r="57" fill="url(#lensGlass)" stroke="#333" stroke-width="7"/>
+    <circle cx="631" cy="573" r="31" fill="#0b0b0b" stroke="#313131" stroke-width="8"/>
+    <circle cx="652" cy="553" r="11" fill="#fff" opacity="0.82"/>
+    <path d="M554 652c49 28 129 26 166-9" fill="none" stroke="#fff" stroke-opacity="0.74" stroke-width="15" stroke-linecap="round"/>
+  </g>
+</svg>

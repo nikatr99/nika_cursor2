@@ -1,0 +1,13 @@
+"target_column","source_file","source_sheet","source_row","source_label","imported_dates"
+"Web_CR_US","10 - October - Sales.xlsx","Summary",147,"- Web CR US",31
+"Web_CR_EU","10 - October - Sales.xlsx","Summary",148,"- Web CR EU",17
+"Web_AOV_US","10 - October - Sales.xlsx","Summary",150,"- Web AOV US",31
+"Web_AOV_EU","10 - October - Sales.xlsx","Summary",151,"- Web AOV EU",16
+"fAOV_US","10 - October - Sales.xlsx","Summary",153,"- fAOV US",31
+"fAOV_EU","10 - October - Sales.xlsx","Summary",154,"- fAOV EU",17
+"rAOV_US","10 - October - Sales.xlsx","Summary",156,"- rAOV US",31
+"rAOV_EU","10 - October - Sales.xlsx","Summary",157,"- rAOV EU",17
+"Returning_Customers_US","10 - October - Sales.xlsx","Summary",164,"- Returning US",31
+"Returning_Customers_EU","10 - October - Sales.xlsx","Summary",165,"- Returning EU",16
+"First_Time_Customers_US","10 - October - Sales.xlsx","Summary",167,"- First-time US",31
+"First_Time_Customers_EU","10 - October - Sales.xlsx","Summary",168,"- First-time EU",16

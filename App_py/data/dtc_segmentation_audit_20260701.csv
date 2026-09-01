@@ -1,0 +1,162 @@
+column,source,changed_cells
+DTC_US_Revenue,alias of DTC_Revenue,305
+DTC_Total_Revenue,DTC_Revenue + DTC_EU_Revenue,305
+DTC_US_Hardware,alias of DTC_Hardware,305
+DTC_Total_Hardware,DTC_Hardware + DTC_EU_Hardware,305
+DTC_US_Addons,alias of DTC_Addons,305
+DTC_Total_Addons,DTC_Addons + DTC_EU_Addons,305
+DTC_US_Merch,alias of DTC_Merch,305
+DTC_Total_Merch,DTC_Merch + DTC_EU_Merch,305
+DTC_US_Seeds,alias of DTC_Seeds,305
+DTC_Total_Seeds,DTC_Seeds + DTC_EU_Seeds,305
+DTC_US_Subscription,alias of DTC_Subscription,305
+DTC_Total_Subscription,DTC_Subscription + DTC_EU_Subscription,305
+DTC_US_Taxes,alias of DTC_Taxes,305
+DTC_Total_Taxes,DTC_Taxes + DTC_EU_Taxes,305
+DTC_US_Shipping,alias of DTC_Shipping,305
+DTC_Total_Shipping,DTC_Shipping + DTC_EU_Shipping,305
+DTC_US_Orders,alias of DTC_Orders,305
+DTC_Total_Orders,DTC_Orders + DTC_EU_Orders,305
+DTC_US_Hardware_Units,alias of DTC_Hardware_Units,305
+DTC_Total_Hardware_Units,DTC_Hardware_Units + DTC_EU_Hardware_Units,305
+DTC_US_Addons_Units,alias of DTC_Addons_Units,305
+DTC_Total_Addons_Units,DTC_Addons_Units + DTC_EU_Addons_Units,305
+DTC_US_Merch_Units,alias of DTC_Merch_Units,305
+DTC_Total_Merch_Units,DTC_Merch_Units + DTC_EU_Merch_Units,305
+DTC_US_Seeds_Units,alias of DTC_Seeds_Units,305
+DTC_Total_Seeds_Units,DTC_Seeds_Units + DTC_EU_Seeds_Units,305
+DTC_US_Subscription_Units,alias of DTC_Subscription_Units,305
+DTC_Total_Subscription_Units,DTC_Subscription_Units + DTC_EU_Subscription_Units,305
+DTC_US_Spend,"default Total_DTC_Spend, October overwritten from Summary row 122",305
+DTC_EU_Spend,"default zero, October from Summary row 123",305
+Meta_Spend_US,"default Meta_Spend, October from Summary row 106",305
+Meta_Spend_EU,"default zero, October from Summary row 107",305
+Google_Spend_US,"default Google_Spend, October from Summary row 109",305
+Google_Spend_EU,"default zero, October from Summary row 110",305
+DTC_US_Spend,10 - October - Sales.xlsx / Summary row 122 (- DTC Spend US),31
+DTC_EU_Spend,10 - October - Sales.xlsx / Summary row 123 (- DTC Spend EU),31
+Meta_Spend_US,10 - October - Sales.xlsx / Summary row 106 (- Meta US),31
+Meta_Spend_EU,10 - October - Sales.xlsx / Summary row 107 (- Meta EU),31
+Google_Spend_US,10 - October - Sales.xlsx / Summary row 109 (- Google Spend US),31
+Google_Spend_EU,10 - October - Sales.xlsx / Summary row 110 (- Google Spend EU),31
+DTC_Total_Spend,alias of Total_DTC_Spend,305
+dtc_us_SKU 1 - Blue,"default alias of dtc_SKU 1 - Blue, October from DTC US&CA - P&L row 23",305
+dtc_eu_SKU 1 - Blue,"default zero, October from DTC EU - P&L row 23",305
+dtc_us_SKU 1 - Blue,10 - October - Sales.xlsx / DTC US&CA - P&L row 23 (SKU 1 - Blue),31
+dtc_eu_SKU 1 - Blue,10 - October - Sales.xlsx / DTC EU - P&L row 23 (SKU 1 - Blue),31
+dtc_us_SKU 2 - Yellow,"default alias of dtc_SKU 2 - Yellow, October from DTC US&CA - P&L row 24",305
+dtc_eu_SKU 2 - Yellow,"default zero, October from DTC EU - P&L row 24",305
+dtc_us_SKU 2 - Yellow,10 - October - Sales.xlsx / DTC US&CA - P&L row 24 (SKU 2 - Yellow),31
+dtc_eu_SKU 2 - Yellow,10 - October - Sales.xlsx / DTC EU - P&L row 24 (SKU 2 - Yellow),31
+dtc_us_SKU 3 - Blue w/ Solar,"default alias of dtc_SKU 3 - Blue w/ Solar, October from DTC US&CA - P&L row 25",305
+dtc_eu_SKU 3 - Blue w/ Solar,"default zero, October from DTC EU - P&L row 25",305
+dtc_us_SKU 3 - Blue w/ Solar,10 - October - Sales.xlsx / DTC US&CA - P&L row 25 (SKU 3 - Blue w/ Solar),31
+dtc_eu_SKU 3 - Blue w/ Solar,10 - October - Sales.xlsx / DTC EU - P&L row 25 (SKU 3 - Blue w/ Solar),31
+dtc_us_SKU 4 - Yellow w/ Solar,"default alias of dtc_SKU 4 - Yellow w/ Solar, October from DTC US&CA - P&L row 26",305
+dtc_eu_SKU 4 - Yellow w/ Solar,"default zero, October from DTC EU - P&L row 26",305
+dtc_us_SKU 4 - Yellow w/ Solar,10 - October - Sales.xlsx / DTC US&CA - P&L row 26 (SKU 4 - Yellow w/ Solar),31
+dtc_eu_SKU 4 - Yellow w/ Solar,10 - October - Sales.xlsx / DTC EU - P&L row 26 (SKU 4 - Yellow w/ Solar),31
+dtc_us_SKU 5 - HBF,"default alias of dtc_SKU 5 - HBF, October from DTC US&CA - P&L row 33",305
+dtc_eu_SKU 5 - HBF,"default zero, October from DTC EU - P&L row 33",305
+dtc_us_SKU 5 - HBF,10 - October - Sales.xlsx / DTC US&CA - P&L row 33 (SKU 5 - HBF),31
+dtc_eu_SKU 5 - HBF,10 - October - Sales.xlsx / DTC EU - P&L row 33 (SKU 5 - HBF),31
+dtc_us_SKU 6 - HBF w/ Solar,"default alias of dtc_SKU 6 - HBF w/ Solar, October from DTC US&CA - P&L row 34",305
+dtc_eu_SKU 6 - HBF w/ Solar,"default zero, October from DTC EU - P&L row 34",305
+dtc_us_SKU 6 - HBF w/ Solar,10 - October - Sales.xlsx / DTC US&CA - P&L row 34 (SKU 6 - HBF w/ Solar),31
+dtc_eu_SKU 6 - HBF w/ Solar,10 - October - Sales.xlsx / DTC EU - P&L row 34 (SKU 6 - HBF w/ Solar),31
+dtc_us_Wall Mount,"default alias of dtc_Wall Mount, October from DTC US&CA - P&L row 37",305
+dtc_eu_Wall Mount,"default zero, October from DTC EU - P&L row 37",305
+dtc_us_Wall Mount,10 - October - Sales.xlsx / DTC US&CA - P&L row 37 (Wall Mount),31
+dtc_eu_Wall Mount,10 - October - Sales.xlsx / DTC EU - P&L row 37 (Wall Mount),31
+dtc_us_Suet Ball Holder,"default alias of dtc_Suet Ball Holder, October from DTC US&CA - P&L row 38",305
+dtc_eu_Suet Ball Holder,"default zero, October from DTC EU - P&L row 38",305
+dtc_us_Suet Ball Holder,10 - October - Sales.xlsx / DTC US&CA - P&L row 38 (Suet Ball Holder),31
+dtc_eu_Suet Ball Holder,10 - October - Sales.xlsx / DTC EU - P&L row 38 (Suet Ball Holder),31
+dtc_us_3-in-1 Nutrition Set - Blue,"default alias of dtc_3-in-1 Nutrition Set - Blue, October from DTC US&CA - P&L row 39",305
+dtc_eu_3-in-1 Nutrition Set - Blue,"default zero, October from DTC EU - P&L row 39",305
+dtc_us_3-in-1 Nutrition Set - Blue,10 - October - Sales.xlsx / DTC US&CA - P&L row 39 (3-in-1 Nutrition Set - Blue),31
+dtc_eu_3-in-1 Nutrition Set - Blue,10 - October - Sales.xlsx / DTC EU - P&L row 39 (3-in-1 Nutrition Set - Blue),31
+dtc_us_3-in-1 Nutrition Set - Yellow,"default alias of dtc_3-in-1 Nutrition Set - Yellow, October from DTC US&CA - P&L row 40",305
+dtc_eu_3-in-1 Nutrition Set - Yellow,"default zero, October from DTC EU - P&L row 40",305
+dtc_us_3-in-1 Nutrition Set - Yellow,10 - October - Sales.xlsx / DTC US&CA - P&L row 40 (3-in-1 Nutrition Set - Yellow),31
+dtc_eu_3-in-1 Nutrition Set - Yellow,10 - October - Sales.xlsx / DTC EU - P&L row 40 (3-in-1 Nutrition Set - Yellow),31
+dtc_us_Solar Roof Single - Blue,"default alias of dtc_Solar Roof Single - Blue, October from DTC US&CA - P&L row 41",305
+dtc_eu_Solar Roof Single - Blue,"default zero, October from DTC EU - P&L row 41",305
+dtc_us_Solar Roof Single - Blue,10 - October - Sales.xlsx / DTC US&CA - P&L row 41 (Solar Roof Single - Blue),31
+dtc_eu_Solar Roof Single - Blue,10 - October - Sales.xlsx / DTC EU - P&L row 41 (Solar Roof Single - Blue),31
+dtc_us_Solar Roof Single - Yellow,"default alias of dtc_Solar Roof Single - Yellow, October from DTC US&CA - P&L row 42",305
+dtc_eu_Solar Roof Single - Yellow,"default zero, October from DTC EU - P&L row 42",305
+dtc_us_Solar Roof Single - Yellow,10 - October - Sales.xlsx / DTC US&CA - P&L row 42 (Solar Roof Single - Yellow),31
+dtc_eu_Solar Roof Single - Yellow,10 - October - Sales.xlsx / DTC EU - P&L row 42 (Solar Roof Single - Yellow),31
+dtc_us_Perch Extender - Blue,"default alias of dtc_Perch Extender - Blue, October from DTC US&CA - P&L row 43",305
+dtc_eu_Perch Extender - Blue,"default zero, October from DTC EU - P&L row 43",305
+dtc_us_Perch Extender - Blue,10 - October - Sales.xlsx / DTC US&CA - P&L row 43 (Perch Extender - Blue),31
+dtc_eu_Perch Extender - Blue,10 - October - Sales.xlsx / DTC EU - P&L row 43 (Perch Extender - Blue),31
+dtc_us_Perch Extender - Yellow,"default alias of dtc_Perch Extender - Yellow, October from DTC US&CA - P&L row 44",305
+dtc_eu_Perch Extender - Yellow,"default zero, October from DTC EU - P&L row 44",305
+dtc_us_Perch Extender - Yellow,10 - October - Sales.xlsx / DTC US&CA - P&L row 44 (Perch Extender - Yellow),31
+dtc_eu_Perch Extender - Yellow,10 - October - Sales.xlsx / DTC EU - P&L row 44 (Perch Extender - Yellow),31
+dtc_us_Solar Roof (HBF),"default alias of dtc_Solar Roof (HBF), October from DTC US&CA - P&L row 45",305
+dtc_eu_Solar Roof (HBF),"default zero, October from DTC EU - P&L row 45",305
+dtc_us_Solar Roof (HBF),10 - October - Sales.xlsx / DTC US&CA - P&L row 45 (Solar Roof (HBF)),31
+dtc_eu_Solar Roof (HBF),10 - October - Sales.xlsx / DTC EU - P&L row 45 (Solar Roof (HBF)),31
+dtc_us_Housing - only (HBF),"default alias of dtc_Housing - only (HBF), October from DTC US&CA - P&L row 46",305
+dtc_eu_Housing - only (HBF),"default zero, October from DTC EU - P&L row 46",305
+dtc_us_Housing - only (HBF),10 - October - Sales.xlsx / DTC US&CA - P&L row 46 (Housing - only (HBF)),31
+dtc_eu_Housing - only (HBF),10 - October - Sales.xlsx / DTC EU - P&L row 46 (Housing - only (HBF)),31
+dtc_us_Seasonal Curation - 8lb,"default alias of dtc_Seasonal Curation - 8lb, October from DTC US&CA - P&L row 50",305
+dtc_eu_Seasonal Curation - 8lb,"default zero, October from DTC EU - P&L row 50",305
+dtc_us_Seasonal Curation - 8lb,10 - October - Sales.xlsx / DTC US&CA - P&L row 50 (Seasonal Curation - 8lb),31
+dtc_eu_Seasonal Curation - 8lb,10 - October - Sales.xlsx / DTC EU - P&L row 50 (Seasonal Curation - 8lb),31
+dtc_us_Seasonal Curation - 20lb,"default alias of dtc_Seasonal Curation - 20lb, October from DTC US&CA - P&L row 51",305
+dtc_eu_Seasonal Curation - 20lb,"default zero, October from DTC EU - P&L row 51",305
+dtc_us_Seasonal Curation - 20lb,10 - October - Sales.xlsx / DTC US&CA - P&L row 51 (Seasonal Curation - 20lb),31
+dtc_eu_Seasonal Curation - 20lb,10 - October - Sales.xlsx / DTC EU - P&L row 51 (Seasonal Curation - 20lb),31
+dtc_us_Buddy Bites - 8lb,"default alias of dtc_Buddy Bites - 8lb, October from DTC US&CA - P&L row 52",305
+dtc_eu_Buddy Bites - 8lb,"default zero, October from DTC EU - P&L row 52",305
+dtc_us_Buddy Bites - 8lb,10 - October - Sales.xlsx / DTC US&CA - P&L row 52 (Buddy Bites - 8lb),31
+dtc_eu_Buddy Bites - 8lb,10 - October - Sales.xlsx / DTC EU - P&L row 52 (Buddy Bites - 8lb),31
+dtc_us_Buddy Bites - 20lb,"default alias of dtc_Buddy Bites - 20lb, October from DTC US&CA - P&L row 53",305
+dtc_eu_Buddy Bites - 20lb,"default zero, October from DTC EU - P&L row 53",305
+dtc_us_Buddy Bites - 20lb,10 - October - Sales.xlsx / DTC US&CA - P&L row 53 (Buddy Bites - 20lb),31
+dtc_eu_Buddy Bites - 20lb,10 - October - Sales.xlsx / DTC EU - P&L row 53 (Buddy Bites - 20lb),31
+dtc_us_Snack n' Soar - 8lb,"default alias of dtc_Snack n' Soar - 8lb, October from DTC US&CA - P&L row 54",305
+dtc_eu_Snack n' Soar - 8lb,"default zero, October from DTC EU - P&L row 54",305
+dtc_us_Snack n' Soar - 8lb,10 - October - Sales.xlsx / DTC US&CA - P&L row 54 (Snack n' Soar - 8lb),31
+dtc_eu_Snack n' Soar - 8lb,10 - October - Sales.xlsx / DTC EU - P&L row 54 (Snack n' Soar - 8lb),31
+dtc_us_Snack n' Soar - 20lb,"default alias of dtc_Snack n' Soar - 20lb, October from DTC US&CA - P&L row 55",305
+dtc_eu_Snack n' Soar - 20lb,"default zero, October from DTC EU - P&L row 55",305
+dtc_us_Snack n' Soar - 20lb,10 - October - Sales.xlsx / DTC US&CA - P&L row 55 (Snack n' Soar - 20lb),31
+dtc_eu_Snack n' Soar - 20lb,10 - October - Sales.xlsx / DTC EU - P&L row 55 (Snack n' Soar - 20lb),31
+dtc_us_Avian Choice - 8lb,"default alias of dtc_Avian Choice - 8lb, October from DTC US&CA - P&L row 56",305
+dtc_eu_Avian Choice - 8lb,"default zero, October from DTC EU - P&L row 56",305
+dtc_us_Avian Choice - 8lb,10 - October - Sales.xlsx / DTC US&CA - P&L row 56 (Avian Choice - 8lb),31
+dtc_eu_Avian Choice - 8lb,10 - October - Sales.xlsx / DTC EU - P&L row 56 (Avian Choice - 8lb),31
+dtc_us_Avian Choice - 20lb,"default alias of dtc_Avian Choice - 20lb, October from DTC US&CA - P&L row 57",305
+dtc_eu_Avian Choice - 20lb,"default zero, October from DTC EU - P&L row 57",305
+dtc_us_Avian Choice - 20lb,10 - October - Sales.xlsx / DTC US&CA - P&L row 57 (Avian Choice - 20lb),31
+dtc_eu_Avian Choice - 20lb,10 - October - Sales.xlsx / DTC EU - P&L row 57 (Avian Choice - 20lb),31
+dtc_SKU 1 - Blue,dtc_us_SKU 1 - Blue + dtc_eu_SKU 1 - Blue,0
+dtc_SKU 2 - Yellow,dtc_us_SKU 2 - Yellow + dtc_eu_SKU 2 - Yellow,0
+dtc_SKU 3 - Blue w/ Solar,dtc_us_SKU 3 - Blue w/ Solar + dtc_eu_SKU 3 - Blue w/ Solar,0
+dtc_SKU 4 - Yellow w/ Solar,dtc_us_SKU 4 - Yellow w/ Solar + dtc_eu_SKU 4 - Yellow w/ Solar,0
+dtc_SKU 5 - HBF,dtc_us_SKU 5 - HBF + dtc_eu_SKU 5 - HBF,0
+dtc_SKU 6 - HBF w/ Solar,dtc_us_SKU 6 - HBF w/ Solar + dtc_eu_SKU 6 - HBF w/ Solar,0
+dtc_Wall Mount,dtc_us_Wall Mount + dtc_eu_Wall Mount,0
+dtc_Suet Ball Holder,dtc_us_Suet Ball Holder + dtc_eu_Suet Ball Holder,0
+dtc_3-in-1 Nutrition Set - Blue,dtc_us_3-in-1 Nutrition Set - Blue + dtc_eu_3-in-1 Nutrition Set - Blue,0
+dtc_3-in-1 Nutrition Set - Yellow,dtc_us_3-in-1 Nutrition Set - Yellow + dtc_eu_3-in-1 Nutrition Set - Yellow,0
+dtc_Solar Roof Single - Blue,dtc_us_Solar Roof Single - Blue + dtc_eu_Solar Roof Single - Blue,0
+dtc_Solar Roof Single - Yellow,dtc_us_Solar Roof Single - Yellow + dtc_eu_Solar Roof Single - Yellow,0
+dtc_Perch Extender - Blue,dtc_us_Perch Extender - Blue + dtc_eu_Perch Extender - Blue,0
+dtc_Perch Extender - Yellow,dtc_us_Perch Extender - Yellow + dtc_eu_Perch Extender - Yellow,0
+dtc_Solar Roof (HBF),dtc_us_Solar Roof (HBF) + dtc_eu_Solar Roof (HBF),0
+dtc_Housing - only (HBF),dtc_us_Housing - only (HBF) + dtc_eu_Housing - only (HBF),0
+dtc_Seasonal Curation - 8lb,dtc_us_Seasonal Curation - 8lb + dtc_eu_Seasonal Curation - 8lb,0
+dtc_Seasonal Curation - 20lb,dtc_us_Seasonal Curation - 20lb + dtc_eu_Seasonal Curation - 20lb,0
+dtc_Buddy Bites - 8lb,dtc_us_Buddy Bites - 8lb + dtc_eu_Buddy Bites - 8lb,0
+dtc_Buddy Bites - 20lb,dtc_us_Buddy Bites - 20lb + dtc_eu_Buddy Bites - 20lb,0
+dtc_Snack n' Soar - 8lb,dtc_us_Snack n' Soar - 8lb + dtc_eu_Snack n' Soar - 8lb,0
+dtc_Snack n' Soar - 20lb,dtc_us_Snack n' Soar - 20lb + dtc_eu_Snack n' Soar - 20lb,0
+dtc_Avian Choice - 8lb,dtc_us_Avian Choice - 8lb + dtc_eu_Avian Choice - 8lb,0
+dtc_Avian Choice - 20lb,dtc_us_Avian Choice - 20lb + dtc_eu_Avian Choice - 20lb,0

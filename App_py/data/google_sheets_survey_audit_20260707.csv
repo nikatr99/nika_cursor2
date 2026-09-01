@@ -1,0 +1,23 @@
+"month","file","metric","raw","app","diff","status","source_row"
+"2024-01","1 - January24 - Sales.xlsx","q0_participants",2469,2469,0,"ok",4
+"2024-01","1 - January24 - Sales.xlsx","q0_engagement_rate_mean",0.622607351341935,NA,NA,NA,5
+"2024-02","2 - February24 - Sales.xlsx","q0_participants",4646,4646,0,"ok",4
+"2024-02","2 - February24 - Sales.xlsx","q0_engagement_rate_mean",0.567350398703226,NA,NA,NA,5
+"2024-03","3 - March24 - Sales.xlsx","q0_participants",3881,3881,0,"ok",4
+"2024-03","3 - March24 - Sales.xlsx","q0_engagement_rate_mean",0.569303016677419,NA,NA,NA,5
+"2024-04","4 - April24 - Sales.xlsx","q0_participants",392,2200,1808,"mismatch",4
+"2024-04","4 - April24 - Sales.xlsx","q0_engagement_rate_mean",0.145551728432258,NA,NA,NA,5
+"2024-05","5 - May24 - Sales.xlsx","q0_participants",2529,2529,0,"ok",4
+"2024-05","5 - May24 - Sales.xlsx","q0_engagement_rate_mean",0.502694072524839,NA,NA,NA,5
+"2024-06","06 - June24 - Sales.xlsx","q0_participants",1462,1462,0,"ok",4
+"2024-06","06 - June24 - Sales.xlsx","q0_engagement_rate_mean",0.348329975993548,NA,NA,NA,5
+"2024-07","07 - July24 - Sales.xlsx","q0_participants",1149,1149,0,"ok",4
+"2024-07","07 - July24 - Sales.xlsx","q0_engagement_rate_mean",0.363625580235484,NA,NA,NA,5
+"2024-08","08 - August24 - Sales.xlsx","q0_participants",994,994,0,"ok",4
+"2024-08","08 - August24 - Sales.xlsx","q0_engagement_rate_mean",0.414271960825806,NA,NA,NA,5
+"2024-09","09 - September24 - Sales.xlsx","q0_participants",443,443,0,"ok",4
+"2024-09","09 - September24 - Sales.xlsx","q0_engagement_rate_mean",0.293526595733333,NA,NA,NA,5
+"2024-10","10 - October24 - Sales.xlsx","q0_participants",1116,1116,0,"ok",4
+"2024-10","10 - October24 - Sales.xlsx","q0_engagement_rate_mean",0.375875959048387,0.375875959048387,0,"ok",5
+"2024-11","11 - November24 - Sales.xlsx","q0_participants",19732,19732,0,"ok",4
+"2024-11","11 - November24 - Sales.xlsx","q0_engagement_rate_mean",0.451840676670968,0.46690203256,0.0150613558890323,"mismatch",5

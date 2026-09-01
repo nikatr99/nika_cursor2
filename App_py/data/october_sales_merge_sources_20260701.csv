@@ -1,0 +1,118 @@
+destination_column,source_file,source_sheet,source_row,source_label,blank_cells_treated_as_zero,allowed_zero_overwrite,changed_cells
+DTC_Orders,10 - October - Sales.xlsx,Summary,70,- DTC Orders US&CA,False,False,31
+DTC_Hardware_Units,10 - October - Sales.xlsx,Summary,71,- Hardware (units sold),False,False,31
+DTC_Addons_Units,10 - October - Sales.xlsx,Summary,72,- Add-ons (units sold),False,False,31
+DTC_Merch_Units,10 - October - Sales.xlsx,Summary,73,- Merch (units sold),False,False,31
+DTC_Seeds_Units,10 - October - Sales.xlsx,Summary,74,- Seeds (units sold),False,False,31
+DTC_Subscription_Units,10 - October - Sales.xlsx,Summary,75,- BB 1 year Pro Subscription,False,False,31
+DTC_EU_Orders,10 - October - Sales.xlsx,Summary,76,- DTC Orders EUROPE,False,True,16
+DTC_EU_Hardware_Units,10 - October - Sales.xlsx,Summary,77,- Hardware (units sold),False,True,16
+DTC_EU_Addons_Units,10 - October - Sales.xlsx,Summary,78,- Add-ons (units sold),False,True,14
+DTC_EU_Merch_Units,10 - October - Sales.xlsx,Summary,79,- Merch (units sold),False,True,0
+DTC_EU_Seeds_Units,10 - October - Sales.xlsx,Summary,80,- Seeds (units sold),False,True,0
+DTC_EU_Subscription_Units,10 - October - Sales.xlsx,Summary,81,- BB 1 year Pro Subscription,False,True,0
+Amazon_Orders,10 - October - Sales.xlsx,Summary,82,Amazon Orders,False,False,31
+Amazon_Hardware_Units,10 - October - Sales.xlsx,Summary,83,- Hardware (units sold),False,False,31
+Amazon_Addons_Units,10 - October - Sales.xlsx,Summary,84,- Add-ons (units sold),False,False,31
+Walmart_Orders,10 - October - Sales.xlsx,Summary,85,Walmart Orders,False,False,31
+Digital_Marketplaces_Orders,10 - October - Sales.xlsx,Summary,87,Digital Marketplaces Orders,False,False,31
+Rachio_Orders,10 - October - Sales.xlsx,Summary,88,Rachio Orders,False,False,31
+Weatherflow_Orders,10 - October - Sales.xlsx,Summary,89,Weatherflow Orders,False,False,31
+Total_Orders,10 - October - Sales.xlsx,Summary,91,Total Orders,False,False,31
+BestBuy_Orders,10 - October - Sales.xlsx,Summary,94,Best Buy,False,False,31
+Target_Orders,10 - October - Sales.xlsx,Summary,95,Target,False,False,31
+B2B_Orders,10 - October - Sales.xlsx,Summary,96,Total Orders,False,False,31
+Google_Store_Orders,10 - October - Sales.xlsx,Summary,99,- Google Store,False,False,31
+Apple_Store_Orders,10 - October - Sales.xlsx,Summary,100,- Apple Store,False,False,31
+App_Orders,10 - October - Sales.xlsx,Summary,101,Total Orders,False,False,31
+Meta_Spend,10 - October - Sales.xlsx,Summary,105,Meta Spend,False,False,31
+Google_Spend,10 - October - Sales.xlsx,Summary,108,Google Spend,False,False,31
+Bing_Spend,10 - October - Sales.xlsx,Summary,111,Bing Spend,False,False,31
+TikTok_Spend,10 - October - Sales.xlsx,Summary,112,TikTok Spend,False,False,31
+Amazon_Spend,10 - October - Sales.xlsx,Summary,113,Amazon Spend,False,False,31
+Nextdoor_Spend,10 - October - Sales.xlsx,Summary,114,Nextdoor Spend,True,False,31
+IndieGoGo_Spend,10 - October - Sales.xlsx,Summary,115,IndieGoGo Spend,True,False,31
+Affiliate_Fees,10 - October - Sales.xlsx,Summary,116,Affiliate Fees,True,False,31
+Rachio_Fees,10 - October - Sales.xlsx,Summary,117,Rachio Fees,False,False,31
+Weatherflow_Fees,10 - October - Sales.xlsx,Summary,118,Weatherflow Fees,False,False,31
+Total_DTC_Spend,10 - October - Sales.xlsx,Summary,121,Total DTC Spend,False,False,31
+Total_Spend,10 - October - Sales.xlsx,Summary,124,Total Spend,False,False,31
+App_Spend_Meta,10 - October - Sales.xlsx,Summary,127,Meta Spend,True,False,31
+App_Spend_Apple,10 - October - Sales.xlsx,Summary,128,Apple Spend,True,False,31
+App_Spend_Google,10 - October - Sales.xlsx,Summary,129,Google Spend,True,False,31
+Total_App_Spend,10 - October - Sales.xlsx,Summary,130,Total APP Spend,True,False,31
+Blended_ROAS,10 - October - Sales.xlsx,Summary,132,Blended ROAS,False,False,31
+wROAS,10 - October - Sales.xlsx,Summary,133,wROAS,False,False,31
+aROAS,10 - October - Sales.xlsx,Summary,136,aROAS,False,False,31
+appROAS,10 - October - Sales.xlsx,Summary,137,appROAS,False,False,0
+Blended_SPU,10 - October - Sales.xlsx,Summary,139,Blended Spend per Unit,False,False,31
+wSPU,10 - October - Sales.xlsx,Summary,140,wSPU,False,False,31
+aSPU,10 - October - Sales.xlsx,Summary,143,aSPU,False,False,31
+appSPU,10 - October - Sales.xlsx,Summary,144,appCAC,True,False,31
+Web_CR,10 - October - Sales.xlsx,Summary,146,Web CR,False,False,31
+Web_AOV,10 - October - Sales.xlsx,Summary,149,Web AOV,False,False,31
+fAOV,10 - October - Sales.xlsx,Summary,152,fAOV,False,False,31
+rAOV,10 - October - Sales.xlsx,Summary,155,rAOV,False,False,31
+Returning_Customers,10 - October - Sales.xlsx,Summary,163,Returning,False,False,31
+First_Time_Customers,10 - October - Sales.xlsx,Summary,166,First-time,False,False,31
+dtc_SKU 1 - Blue,10 - October - Sales.xlsx,DTC - P&L,55,SKU 1 - Blue,False,False,31
+dtc_SKU 2 - Yellow,10 - October - Sales.xlsx,DTC - P&L,56,SKU 2 - Yellow,False,False,31
+dtc_SKU 3 - Blue w/ Solar,10 - October - Sales.xlsx,DTC - P&L,57,SKU 3 - Blue w/ Solar,False,False,31
+dtc_SKU 4 - Yellow w/ Solar,10 - October - Sales.xlsx,DTC - P&L,58,SKU 4 - Yellow w/ Solar,False,False,31
+dtc_SKU 5 - HBF,10 - October - Sales.xlsx,DTC - P&L,65,SKU 5 - HBF,False,False,31
+dtc_SKU 6 - HBF w/ Solar,10 - October - Sales.xlsx,DTC - P&L,66,SKU 6 - HBF w/ Solar,False,False,31
+dtc_Wall Mount,10 - October - Sales.xlsx,DTC - P&L,69,Wall Mount,False,False,31
+dtc_Suet Ball Holder,10 - October - Sales.xlsx,DTC - P&L,70,Suet Ball Holder,False,False,31
+dtc_3-in-1 Nutrition Set - Blue,10 - October - Sales.xlsx,DTC - P&L,71,3-in-1 Nutrition Set - Blue,False,False,31
+dtc_3-in-1 Nutrition Set - Yellow,10 - October - Sales.xlsx,DTC - P&L,72,3-in-1 Nutrition Set - Yellow,False,False,31
+dtc_Solar Roof Single - Blue,10 - October - Sales.xlsx,DTC - P&L,73,Solar Roof Single - Blue,False,False,31
+dtc_Solar Roof Single - Yellow,10 - October - Sales.xlsx,DTC - P&L,74,Solar Roof Single - Yellow,False,False,31
+dtc_Perch Extender - Blue,10 - October - Sales.xlsx,DTC - P&L,75,Perch Extender - Blue,False,False,31
+dtc_Perch Extender - Yellow,10 - October - Sales.xlsx,DTC - P&L,76,Perch Extender - Yellow,False,False,31
+dtc_Solar Roof (HBF),10 - October - Sales.xlsx,DTC - P&L,77,Solar Roof (HBF),False,False,31
+dtc_Housing - only (HBF),10 - October - Sales.xlsx,DTC - P&L,78,Housing - only (HBF),False,False,31
+dtc_Seasonal Curation - 8lb,10 - October - Sales.xlsx,DTC - P&L,82,Seasonal Curation - 8lb,False,False,31
+dtc_Seasonal Curation - 20lb,10 - October - Sales.xlsx,DTC - P&L,83,Seasonal Curation - 20lb,False,False,31
+dtc_Buddy Bites - 8lb,10 - October - Sales.xlsx,DTC - P&L,84,Buddy Bites - 8lb,False,False,31
+dtc_Buddy Bites - 20lb,10 - October - Sales.xlsx,DTC - P&L,85,Buddy Bites - 20lb,False,False,31
+dtc_Snack n' Soar - 8lb,10 - October - Sales.xlsx,DTC - P&L,86,Snack n' Soar - 8lb,False,False,31
+dtc_Snack n' Soar - 20lb,10 - October - Sales.xlsx,DTC - P&L,87,Snack n' Soar - 20lb,False,False,31
+dtc_Avian Choice - 8lb,10 - October - Sales.xlsx,DTC - P&L,88,Avian Choice - 8lb,False,False,31
+dtc_Avian Choice - 20lb,10 - October - Sales.xlsx,DTC - P&L,89,Avian Choice - 20lb,False,False,31
+amazon_SKU 1 - Blue,10 - October - Sales.xlsx,AMAZON - P&L,28,SKU 1 - Blue,False,False,31
+amazon_SKU 2 - Yellow,10 - October - Sales.xlsx,AMAZON - P&L,29,SKU 2 - Yellow,False,False,31
+amazon_SKU 3 - Blue w/ Solar,10 - October - Sales.xlsx,AMAZON - P&L,30,SKU 3 - Blue w/ Solar,False,False,31
+amazon_SKU 4 - Yellow w/ Solar,10 - October - Sales.xlsx,AMAZON - P&L,31,SKU 4 - Yellow w/ Solar,False,False,31
+amazon_Wall Mount,10 - October - Sales.xlsx,AMAZON - P&L,42,Wall Mount,False,False,31
+amazon_Suet Ball Holder,10 - October - Sales.xlsx,AMAZON - P&L,43,Suet Ball Holder,False,False,31
+amazon_3-in-1 Nutrition Set - Blue,10 - October - Sales.xlsx,AMAZON - P&L,44,3-in-1 Nutrition Set - Blue,False,False,31
+amazon_3-in-1 Nutrition Set - Yellow,10 - October - Sales.xlsx,AMAZON - P&L,45,3-in-1 Nutrition Set - Yellow,False,False,31
+amazon_Solar Roof Single - Blue,10 - October - Sales.xlsx,AMAZON - P&L,46,Solar Roof Single - Blue,False,False,31
+amazon_Solar Roof Single - Yellow,10 - October - Sales.xlsx,AMAZON - P&L,47,Solar Roof Single - Yellow,False,False,31
+amazon_Perch Extender - Blue,10 - October - Sales.xlsx,AMAZON - P&L,48,Perch Extender - Blue,False,False,31
+amazon_Perch Extender - Yellow,10 - October - Sales.xlsx,AMAZON - P&L,49,Perch Extender - Yellow,False,False,31
+rachio_SKU 1 - Blue,10 - October - Sales.xlsx,Digital Marketplaces - P&L,13,SKU 1 - Blue,True,False,31
+rachio_SKU 2 - Yellow,10 - October - Sales.xlsx,Digital Marketplaces - P&L,14,SKU 2 - Yellow,True,False,31
+rachio_SKU 3 - Blue w/ Solar,10 - October - Sales.xlsx,Digital Marketplaces - P&L,15,SKU 3 - Blue w/ Solar,True,False,31
+rachio_SKU 4 - Yellow w/ Solar,10 - October - Sales.xlsx,Digital Marketplaces - P&L,16,SKU 4 - Yellow w/ Solar,True,False,31
+weatherflow_SKU 1 - Blue,10 - October - Sales.xlsx,Digital Marketplaces - P&L,125,SKU 1 - Blue,True,False,31
+weatherflow_SKU 2 - Yellow,10 - October - Sales.xlsx,Digital Marketplaces - P&L,126,SKU 2 - Yellow,True,False,31
+weatherflow_SKU 3 - Blue w/ Solar,10 - October - Sales.xlsx,Digital Marketplaces - P&L,127,SKU 3 - Blue w/ Solar,True,False,31
+weatherflow_SKU 4 - Yellow w/ Solar,10 - October - Sales.xlsx,Digital Marketplaces - P&L,128,SKU 4 - Yellow w/ Solar,True,False,31
+walmart_SKU 1 - Blue,10 - October - Sales.xlsx,WALMART - P&L,15,SKU 1 - Blue,True,False,31
+walmart_SKU 2 - Yellow,10 - October - Sales.xlsx,WALMART - P&L,16,SKU 2 - Yellow,True,False,31
+walmart_SKU 3 - Blue w/ Solar,10 - October - Sales.xlsx,WALMART - P&L,17,SKU 3 - Blue w/ Solar,True,False,31
+walmart_SKU 4 - Yellow w/ Solar,10 - October - Sales.xlsx,WALMART - P&L,18,SKU 4 - Yellow w/ Solar,True,False,31
+walmart_Wall Mount,10 - October - Sales.xlsx,WALMART - P&L,21,Wall Mount,True,False,31
+walmart_Suet Ball Holder,10 - October - Sales.xlsx,WALMART - P&L,22,Suet Ball Holder,True,False,31
+walmart_3-in-1 Nutrition Set - Blue,10 - October - Sales.xlsx,WALMART - P&L,23,3-in-1 Nutrition Set - Blue,True,False,31
+walmart_3-in-1 Nutrition Set - Yellow,10 - October - Sales.xlsx,WALMART - P&L,24,3-in-1 Nutrition Set - Yellow,True,False,31
+walmart_Solar Roof Single - Blue,10 - October - Sales.xlsx,WALMART - P&L,25,Solar Roof Single - Blue,True,False,31
+walmart_Solar Roof Single - Yellow,10 - October - Sales.xlsx,WALMART - P&L,26,Solar Roof Single - Yellow,True,False,31
+walmart_Perch Extender - Blue,10 - October - Sales.xlsx,WALMART - P&L,27,Perch Extender - Blue,True,False,31
+walmart_Perch Extender - Yellow,10 - October - Sales.xlsx,WALMART - P&L,28,Perch Extender - Yellow,True,False,31
+apple_yearly_sub,10 - October - Sales.xlsx,App - P&L,15,- Yearly Subscription,False,False,31
+apple_monthly_sub,10 - October - Sales.xlsx,App - P&L,16,- Monthly Subscription,False,False,31
+google_yearly_sub,10 - October - Sales.xlsx,App - P&L,18,- Yearly Subscription,False,False,31
+google_monthly_sub,10 - October - Sales.xlsx,App - P&L,19,- Monthly Subscription,False,False,31
+Fees,10 - October - Sales.xlsx,Summary,117 + 118,Rachio Fees + Weatherflow Fees,False,False,31
