@@ -298,6 +298,40 @@ def missing_summary_default(field: str) -> float:
     return 0.0
 
 
+def mask_customer_rates_without_customers(
+    revenue: pd.DataFrame, dates: list[date], *, regional: bool
+) -> pd.DataFrame:
+    """Keep customer-share rates blank when their customer count is zero.
+
+    The workbook calculates first-time share as ``1 - returning share``. On an
+    unreported day the returning cell is blank, but the cached first-time formula
+    can therefore be 1.0. Treating that as a real 100% share would make an empty
+    future day look populated and could bias averages.
+    """
+    groups = [
+        ("Customers", ("Returning_Customers", "First_Time_Customers")),
+    ]
+    if regional:
+        groups.extend(
+            [
+                ("Customers_US", ("Returning_Customers_US", "First_Time_Customers_US")),
+                ("Customers_EU", ("Returning_Customers_EU", "First_Time_Customers_EU")),
+            ]
+        )
+
+    date_index = pd.to_datetime(revenue["Date"]).dt.date
+    selected = date_index.isin(dates)
+    for count_field, rate_fields in groups:
+        no_customers = numeric_series(revenue, dates, count_field).values <= 0
+        for field in rate_fields:
+            if field not in revenue.columns:
+                continue
+            values = pd.to_numeric(revenue.loc[selected, field], errors="coerce").to_numpy(copy=True)
+            values[no_customers] = np.nan
+            revenue.loc[selected, field] = values
+    return revenue
+
+
 # Last month whose Summary "Total Revenue" row already has Digital Marketplaces in it.
 DM_INSIDE_SUMMARY_TOTAL_THROUGH = (2024, 11)
 
@@ -1128,7 +1162,7 @@ def fill_summary(revenue: pd.DataFrame, wb: WorkbookCache, dates: list[date], lo
         revenue = put_values(revenue, dates, "Amazon_EU_Addons_Units", [0.0] * len(dates))
         for field in ["Web_CR_EU", "Web_AOV_EU", "fAOV_EU", "rAOV_EU", "Returning_Customers_EU", "First_Time_Customers_EU"]:
             revenue = put_values(revenue, dates, field, [np.nan] * len(dates))
-    return revenue
+    return mask_customer_rates_without_customers(revenue, dates, regional=not old)
 
 
 # Boundary between the Summary sheet's revenue blocks. The region and subscription
