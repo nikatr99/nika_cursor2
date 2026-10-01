@@ -23,6 +23,8 @@ FAMILY_ADDONS = [
     "Perch Extender",
     "HBF housing",
     "HBF Solar Roof",
+    "Pole System",
+    "Planter Base",
 ]
 
 
@@ -67,6 +69,27 @@ def test_family_units_cover_every_feeder_except_bird_buddy_home():
     raw = {c for p in app.SKU_PRODUCTS for cols in p["cols"].values() for c in cols}
     assert home_cols and not (grouped & home_cols)
     assert raw - grouped == home_cols
+
+
+def test_pole_system_and_planter_base_map_to_their_shipping_skus():
+    # The line-up names the part the customer buys; the workbook ships them as the
+    # two Nature Stations and the Pollinator Pot.
+    _, addons, _ = app.family_pnl_product_sets()
+    by_name = {p["name"]: p for p in addons}
+    source = {p["name"]: p for p in app.ADDON_PRODUCTS}
+
+    pole_cols = {c for cols in by_name["Pole System"]["cols"].values() for c in cols}
+    expected_pole = {
+        c
+        for name in ("Nature Station Essential", "Nature Station Bloom")
+        for cols in source[name]["cols"].values()
+        for c in cols
+    }
+    assert pole_cols == expected_pole
+
+    planter_cols = {c for cols in by_name["Planter Base"]["cols"].values() for c in cols}
+    expected_planter = {c for cols in source["Pollinator Pot"]["cols"].values() for c in cols}
+    assert planter_cols == expected_planter
 
 
 def test_pnl_product_sets_dispatches_on_mode():

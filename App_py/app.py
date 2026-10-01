@@ -1594,8 +1594,8 @@ def family_pnl_product_sets() -> tuple[List[dict], List[dict], List[dict]]:
     solar feeder does not. Colour and PRO variants collapse into the family line, and
     Nature Cam PRO is reported as hardware rather than as an add-on.
 
-    Pole System and Planter Base are named in this line-up but have no column in any
-    workbook yet, so they cannot be shown until the sync starts carrying them.
+    Pole System is the two Nature Stations and Planter Base is the Pollinator Pot;
+    both are named for the part the customer buys rather than the SKU it ships under.
     """
     sources = [*SKU_PRODUCTS, *ADDON_PRODUCTS]
     family_skus = merged_products(
@@ -1670,6 +1670,12 @@ def family_pnl_product_sets() -> tuple[List[dict], List[dict], List[dict]]:
             },
             {"name": "HBF housing", "image": "hbf housing.png", "sources": ["Housing - only (HBF)"]},
             {"name": "HBF Solar Roof", "image": "hbf roof.png", "sources": ["Solar Roof (HBF)"]},
+            {
+                "name": "Pole System",
+                "image": "nature-station-essential.webp",
+                "sources": ["Nature Station Essential", "Nature Station Bloom"],
+            },
+            {"name": "Planter Base", "image": "pollinator-pot.webp", "sources": ["Pollinator Pot"]},
         ],
         ADDON_PRODUCTS,
         PNL_ADDON_CHANNELS,
