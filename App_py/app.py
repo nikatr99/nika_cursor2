@@ -547,6 +547,15 @@ def merged_control():
                     ui.input_checkbox("pnl_merge_products", "Merge products", False),
                     class_="date-toggle",
                 ),
+                ui.div(
+                    ui.input_checkbox("pnl_merge_families", "Merge SBF/HBF", False),
+                    class_="date-toggle",
+                    title=(
+                        "One line per feeder family, with each retail bundle kept on its own row "
+                        "and Nature Cam PRO reported as hardware. Colour and PRO variants collapse "
+                        "into the family line."
+                    ),
+                ),
                 class_="pnl-merge-toggle",
             ),
             class_="pnl-control-head",
@@ -1575,6 +1584,107 @@ def merged_pnl_product_sets() -> tuple[List[dict], List[dict], List[dict]]:
         PNL_ADDON_CHANNELS,
     )
     return merged_skus, merged_addons, merged_seed_items()
+
+
+def family_pnl_product_sets() -> tuple[List[dict], List[dict], List[dict]]:
+    """The SBF/HBF grouping: one line per feeder family, retail bundles kept apart.
+
+    Unlike the default merge, which folds the retail bundle into the solar line it is
+    built on, each bundle is its own row here because it carries an accessory the plain
+    solar feeder does not. Colour and PRO variants collapse into the family line, and
+    Nature Cam PRO is reported as hardware rather than as an add-on.
+
+    Pole System and Planter Base are named in this line-up but have no column in any
+    workbook yet, so they cannot be shown until the sync starts carrying them.
+    """
+    sources = [*SKU_PRODUCTS, *ADDON_PRODUCTS]
+    family_skus = merged_products(
+        [
+            {
+                "name": "SBF",
+                "image": "sku-blue.png",
+                "sources": ["Blue Smart Bird Feeder", "Yellow Smart Bird Feeder", "Smart Bird Feeder PRO"],
+            },
+            {
+                "name": "SBF w Solar Roof",
+                "image": "sku-blue-solar.png",
+                "sources": [
+                    "Blue Smart Bird Feeder with Solar Roof",
+                    "Yellow Smart Bird Feeder with Solar Roof",
+                    "Smart Bird Feeder PRO with Solar Roof",
+                ],
+            },
+            {
+                "name": "SBF w Solar Roof + Perch Extender (Retail)",
+                "image": "sku-blue-solar.png",
+                "badge": "Retail SKU",
+                "sources": ["Smart Bird Feeder PRO Solar with PEX"],
+            },
+            {
+                "name": "HBF",
+                "image": "sku-hbf.webp",
+                "sources": ["Smart Hummingbird Feeder", "Smart Hummingbird Feeder PRO"],
+            },
+            {
+                "name": "HBF w Solar Roof",
+                "image": "sku-hbf-solar.webp",
+                "sources": [
+                    "Smart Hummingbird Feeder with Solar Roof",
+                    "Smart Hummingbird Feeder with Solar Roof PRO",
+                ],
+            },
+            {
+                "name": "HBF w Solar Roof + extra base&flower ports (Retail)",
+                "image": "sku-hbf-solar.webp",
+                "badge": "Retail SKU",
+                "sources": ["Smart Hummingbird Feeder PRO Solar (Retail SKU)"],
+            },
+            {
+                "name": "Nature Cam PRO",
+                "image": "nature-cam-icon.png",
+                "badge": "PRO",
+                "sources": ["Nature Cam PRO"],
+            },
+        ],
+        sources,
+        PNL_UNIT_CHANNELS,
+    )
+    family_addons = merged_products(
+        [
+            {
+                "name": "SBF Solar Roof",
+                "image": "solar roof blue.png",
+                "sources": ["Solar Roof Single - Blue", "Solar Roof Single - Yellow"],
+            },
+            {"name": "Wall Mount", "image": "wall mount.png", "sources": ["Wall Mount"]},
+            {"name": "Suet Ball Holder", "image": "suet ball.png", "sources": ["Suet Ball Holder"]},
+            {
+                "name": "3-in-1 Nutrition Set",
+                "image": "nutrition blue.png",
+                "sources": ["3-in-1 Nutrition Set - Blue", "3-in-1 Nutrition Set - Yellow"],
+            },
+            {
+                "name": "Perch Extender",
+                "image": "perch blue.png",
+                "sources": ["Perch Extender - Blue", "Perch Extender - Yellow"],
+            },
+            {"name": "HBF housing", "image": "hbf housing.png", "sources": ["Housing - only (HBF)"]},
+            {"name": "HBF Solar Roof", "image": "hbf roof.png", "sources": ["Solar Roof (HBF)"]},
+        ],
+        ADDON_PRODUCTS,
+        PNL_ADDON_CHANNELS,
+    )
+    return family_skus, family_addons, merged_seed_items()
+
+
+# The product line-up the P&L is reporting: the raw SKUs, the default merge, or the
+# SBF/HBF families above.
+def pnl_product_sets(mode: str) -> tuple[List[dict], List[dict], List[dict]]:
+    if mode == "families":
+        return family_pnl_product_sets()
+    if mode == "merged":
+        return merged_pnl_product_sets()
+    return list(SKU_PRODUCTS), list(ADDON_PRODUCTS), pnl_seed_items()
 
 
 def metric_summary(df: pd.DataFrame) -> Dict[str, float]:
@@ -4627,6 +4737,28 @@ def server(input: Inputs, output: Outputs, session: Session):
             current.add(key)
         summary_expanded.set(frozenset(current))
 
+    def pnl_mode() -> str:
+        """Which product line-up the P&L is showing."""
+        if bool(input.pnl_merge_families()):
+            return "families"
+        if bool(input.pnl_merge_products()):
+            return "merged"
+        return "raw"
+
+    # The two merges are different groupings of the same units, so ticking one releases
+    # the other rather than leaving the page to guess which was meant.
+    @reactive.effect
+    @reactive.event(input.pnl_merge_products, ignore_init=True)
+    def _merge_products_wins():
+        if bool(input.pnl_merge_products()) and bool(input.pnl_merge_families()):
+            ui.update_checkbox("pnl_merge_families", value=False)
+
+    @reactive.effect
+    @reactive.event(input.pnl_merge_families, ignore_init=True)
+    def _merge_families_wins():
+        if bool(input.pnl_merge_families()) and bool(input.pnl_merge_products()):
+            ui.update_checkbox("pnl_merge_products", value=False)
+
     @reactive.effect
     @reactive.event(input.toggle_notes, ignore_init=True)
     def _toggle_notes():
@@ -5390,8 +5522,7 @@ def server(input: Inputs, output: Outputs, session: Session):
         value_channels = [*channels, "All"] if show_all else list(channels)
         # The export follows the SKU mix toggle, so a downloaded table reads the same
         # way as the one on screen.
-        merge_pnl = bool(input.pnl_merge_products())
-        unit_products = merged_pnl_product_sets()[0] if merge_pnl else SKU_PRODUCTS
+        unit_products = pnl_product_sets(pnl_mode())[0]
         base = hardware_base(product_counts(df, unit_products, channels)) if bool(input.pnl_sku_mix()) else None
         rows = []
         totals = {channel: 0.0 for channel in value_channels}
@@ -5425,8 +5556,7 @@ def server(input: Inputs, output: Outputs, session: Session):
     def export_data(output_id: str, by_sku: bool = False) -> pd.DataFrame:
         if output_id == "summary_cards":
             return summary_export()
-        merge_pnl = bool(input.pnl_merge_products())
-        export_skus, export_addons, export_seeds = merged_pnl_product_sets() if merge_pnl else (SKU_PRODUCTS, ADDON_PRODUCTS, pnl_seed_items())
+        export_skus, export_addons, export_seeds = pnl_product_sets(pnl_mode())
         if output_id == "pnl_units":
             return pnl_product_export(export_skus, PNL_UNIT_CHANNELS)
         if output_id == "pnl_addons":
@@ -6399,9 +6529,8 @@ def server(input: Inputs, output: Outputs, session: Session):
     def pnl_view():
         df = revenue_view_filtered()
         comp_on = bool(input.comparison_mode())
-        merge_pnl = bool(input.pnl_merge_products())
         prev_df = revenue_prev_year_view() if comp_on else pd.DataFrame()
-        unit_products, addon_products, seed_items = merged_pnl_product_sets() if merge_pnl else (SKU_PRODUCTS, ADDON_PRODUCTS, pnl_seed_items())
+        unit_products, addon_products, seed_items = pnl_product_sets(pnl_mode())
         selected_channels = input.pnl_channels() or PNL_UNIT_CHANNELS
         if isinstance(selected_channels, str):
             selected_channels = [selected_channels]
