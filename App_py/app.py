@@ -534,8 +534,20 @@ def merged_control():
                 class_="pnl-preset-control",
             ),
             ui.div(
-                ui.input_checkbox("pnl_merge_products", "Merge products", False),
-                class_="date-toggle pnl-merge-toggle",
+                ui.div(
+                    ui.input_checkbox("pnl_sku_mix", "SKU mix", False),
+                    class_="date-toggle",
+                    title=(
+                        "Show each row as a share of its channel's feeder units instead of a count. "
+                        "Hardware reads as a mix adding to 100%; add-ons, seeds and gift bags read as "
+                        "an attach rate per feeder. Channels with no feeders of their own show nothing."
+                    ),
+                ),
+                ui.div(
+                    ui.input_checkbox("pnl_merge_products", "Merge products", False),
+                    class_="date-toggle",
+                ),
+                class_="pnl-merge-toggle",
             ),
             class_="pnl-control-head",
         ),
@@ -1658,6 +1670,15 @@ def product_counts(df: pd.DataFrame, products: Sequence[dict], channels: Sequenc
     return out
 
 
+def hardware_base(counts: Dict[str, Dict[str, float]]) -> Dict[str, float]:
+    """Feeder units per channel, the denominator every SKU-mix percentage uses."""
+    base: Dict[str, float] = {}
+    for row in counts.values():
+        for channel, value in row.items():
+            base[channel] = base.get(channel, 0.0) + value
+    return base
+
+
 def product_name_tag(product: dict):
     display_name = product.get("display_name", product["name"])
     note = product.get("note")
@@ -1691,20 +1712,54 @@ def total_label(channel: str):
     return ui.HTML(f"{channel.upper()}<br/>TOTAL")
 
 
+def mix_share(value: float, base: Optional[float]) -> Optional[float]:
+    """A product's units as a share of its channel's hardware units.
+
+    The denominator is always the feeder count, so the hardware rows read as a
+    mix that adds to 100% and the add-on, seed and gift-bag rows read as an
+    attach rate per feeder sold. Channels with no feeders of their own (the app
+    stores) have no base, so they report nothing rather than a false zero.
+    """
+    if not base:
+        return None
+    return value / base
+
+
+def mix_cell_text(value: float, share: Optional[float]) -> Tuple[str, str]:
+    """The percentage shown in the cell, and the richer text for its hover tip."""
+    if share is None:
+        return "-", f"- ({fmt_num(value)} units)"
+    return fmt_pct(share), f"{fmt_pct(share)} ({fmt_num(value)} units)"
+
+
 def product_value_cell(
     product: dict,
     row_counts: Dict[str, float],
     channel: str,
     prev_row_counts: Optional[Dict[str, float]] = None,
+    *,
+    mix_base: Optional[Dict[str, float]] = None,
+    prev_mix_base: Optional[Dict[str, float]] = None,
 ):
     current = row_counts.get(channel, 0)
-    yoy = (
-        yoy_pct_html(current, prev_row_counts.get(channel, 0), prev_formatter=fmt_num)
-        if prev_row_counts
-        else ""
-    )
+    if mix_base is None:
+        display = tip_value = fmt_num(current)
+        yoy = (
+            yoy_pct_html(current, prev_row_counts.get(channel, 0), prev_formatter=fmt_num)
+            if prev_row_counts
+            else ""
+        )
+    else:
+        share = mix_share(current, mix_base.get(channel, 0.0))
+        display, tip_value = mix_cell_text(current, share)
+        prev_share = (
+            mix_share(prev_row_counts.get(channel, 0), (prev_mix_base or {}).get(channel, 0.0))
+            if prev_row_counts is not None
+            else None
+        )
+        yoy = yoy_pct_html(share, prev_share, prev_formatter=fmt_pct) if share is not None else ""
     return ui.div(
-        ui.div(fmt_num(current), class_=f"product-number {'all-channel' if channel == 'All' else ''}"),
+        ui.div(display, class_=f"product-number {'all-channel' if channel == 'All' else ''}"),
         ui.HTML(yoy or ""),
         class_="product-number-wrap product-value-cell",
         **{
@@ -1712,7 +1767,7 @@ def product_value_cell(
             "data-channel-label": channel_header(channel) if isinstance(channel_header(channel), str) else "All Channels",
             "data-product": product.get("display_name", product["name"]),
             "data-sku": product.get("sku", ""),
-            "data-value": fmt_num(current),
+            "data-value": tip_value,
         },
     )
 
@@ -1727,6 +1782,8 @@ def build_product_section(
     values_width: Optional[int] = None,
     export_id: Optional[str] = None,
     prev_counts: Optional[Dict[str, Dict[str, float]]] = None,
+    mix_base: Optional[Dict[str, float]] = None,
+    prev_mix_base: Optional[Dict[str, float]] = None,
 ):
     value_channels = [*channels, "All"] if show_all else list(channels)
     value_width = values_width or (140 if len(value_channels) == 1 else 96 * len(channels) + (125 if show_all else 0))
@@ -1778,6 +1835,8 @@ def build_product_section(
                             row_counts,
                             channel,
                             prev_counts.get(product["name"], {}) if prev_counts else None,
+                            mix_base=mix_base,
+                            prev_mix_base=prev_mix_base,
                         )
                         for channel in value_channels
                     ),
@@ -1786,6 +1845,23 @@ def build_product_section(
                 class_="product-row alt" if idx % 2 else "product-row",
             )
         )
+    def total_text(channel: str) -> Tuple[str, str]:
+        value = totals[channel]
+        if mix_base is None:
+            return fmt_num(value), fmt_num(value)
+        return mix_cell_text(value, mix_share(value, mix_base.get(channel, 0.0)))
+
+    def total_yoy(channel: str) -> str:
+        if not prev_counts:
+            return ""
+        if mix_base is None:
+            return yoy_pct_html(totals[channel], prev_totals[channel], prev_formatter=fmt_num) or ""
+        share = mix_share(totals[channel], mix_base.get(channel, 0.0))
+        prev_share = mix_share(prev_totals[channel], (prev_mix_base or {}).get(channel, 0.0))
+        if share is None:
+            return ""
+        return yoy_pct_html(share, prev_share, prev_formatter=fmt_pct) or ""
+
     total_row = ui.div(
         ui.div("", class_="product-total-spacer"),
         ui.div(
@@ -1793,8 +1869,8 @@ def build_product_section(
                 ui.div(
                     ui.div(total_label(channel), class_="product-total-label"),
                     ui.div(
-                        ui.div(fmt_num(totals[channel]), class_=f"product-total-number {'all-channel' if channel == 'All' else ''}"),
-                        ui.HTML((yoy_pct_html(totals[channel], prev_totals[channel], prev_formatter=fmt_num) if prev_counts else "") or ""),
+                        ui.div(total_text(channel)[0], class_=f"product-total-number {'all-channel' if channel == 'All' else ''}"),
+                        ui.HTML(total_yoy(channel) or ""),
                         class_="product-total-number-wrap",
                     ),
                     class_="product-total-cell",
@@ -1803,7 +1879,7 @@ def build_product_section(
                         "data-channel-label": channel_header(channel) if isinstance(channel_header(channel), str) else "All Channels",
                         "data-product": f"{title} Total",
                         "data-sku": "",
-                        "data-value": fmt_num(totals[channel]),
+                        "data-value": total_text(channel)[1],
                     },
                 )
                 for channel in value_channels
@@ -3559,6 +3635,12 @@ ul.nav.nav-tabs {
   align-self: flex-end;
   margin: 0;
   flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.pnl-merge-toggle > .date-toggle {
+  margin: 0;
 }
 .product-section {
   position: relative;
@@ -5303,8 +5385,14 @@ def server(input: Inputs, output: Outputs, session: Session):
         return pd.DataFrame(rows)
 
     def pnl_product_export(products: Sequence[dict], channels: Sequence[str], *, show_all: bool = True) -> pd.DataFrame:
-        counts = product_counts(revenue_view_filtered(), products, channels)
+        df = revenue_view_filtered()
+        counts = product_counts(df, products, channels)
         value_channels = [*channels, "All"] if show_all else list(channels)
+        # The export follows the SKU mix toggle, so a downloaded table reads the same
+        # way as the one on screen.
+        merge_pnl = bool(input.pnl_merge_products())
+        unit_products = merged_pnl_product_sets()[0] if merge_pnl else SKU_PRODUCTS
+        base = hardware_base(product_counts(df, unit_products, channels)) if bool(input.pnl_sku_mix()) else None
         rows = []
         totals = {channel: 0.0 for channel in value_channels}
         for product in products:
@@ -5316,10 +5404,21 @@ def server(input: Inputs, output: Outputs, session: Session):
             for channel in value_channels:
                 value = row_counts.get(channel, 0.0)
                 totals[channel] += value
-                row[channel] = "" if channel != "All" and not product["cols"].get(channel) else value
+                if channel != "All" and not product["cols"].get(channel):
+                    row[channel] = ""
+                elif base is None:
+                    row[channel] = value
+                else:
+                    share = mix_share(value, base.get(channel, 0.0))
+                    row[channel] = "" if share is None else round(share, 6)
             rows.append(row)
         total_row = {"Product": "TOTAL", "SKU": ""}
-        total_row.update(totals)
+        for channel in value_channels:
+            if base is None:
+                total_row[channel] = totals[channel]
+            else:
+                share = mix_share(totals[channel], base.get(channel, 0.0))
+                total_row[channel] = "" if share is None else round(share, 6)
         rows.append(total_row)
         return pd.DataFrame(rows)
 
@@ -6315,6 +6414,13 @@ def server(input: Inputs, output: Outputs, session: Session):
         prev_addon_counts = product_counts(prev_df, addon_products, addon_display_channels) if comp_on else None
         prev_sub_counts = product_counts(prev_df, APP_SUB_PRODUCTS, ["DTC", "Apple", "Google"]) if comp_on else None
 
+        # Every section is measured against the same denominator: the feeder units that
+        # channel sold, taken from the hardware counts already on screen so the hardware
+        # mix adds to exactly the 100% its own total row shows.
+        sku_mix = bool(input.pnl_sku_mix())
+        mix_base = hardware_base(sku_counts) if sku_mix else None
+        prev_mix_base = hardware_base(prev_sku_counts) if sku_mix and prev_sku_counts else None
+
         seed_counts = product_counts(df, seed_items, ["DTC"])
         gift_bag_counts = product_counts(df, GIFT_BAG_PRODUCTS, ["DTC"])
         prev_seed_counts = product_counts(prev_df, seed_items, ["DTC"]) if comp_on else None
@@ -6327,11 +6433,13 @@ def server(input: Inputs, output: Outputs, session: Session):
                 unit_display_channels,
                 export_id="pnl_units",
                 prev_counts=prev_sku_counts,
+                mix_base=mix_base,
+                prev_mix_base=prev_mix_base,
             ),
-            build_product_section("Add-ons Sold (Gross)", addon_products, addon_counts, addon_display_channels, export_id="pnl_addons", prev_counts=prev_addon_counts),
-            build_product_section("App Subscriptions", APP_SUB_PRODUCTS, sub_counts, ["DTC", "Apple", "Google"], export_id="pnl_app_subscriptions", prev_counts=prev_sub_counts),
-            build_product_section("Seeds Sold (Gross)", seed_items, seed_counts, ["DTC"], show_all=False, values_width=150, export_id="pnl_seeds", prev_counts=prev_seed_counts),
-            build_product_section("Gift Bags Sold (Gross)", GIFT_BAG_PRODUCTS, gift_bag_counts, ["DTC"], show_all=False, values_width=150, export_id="pnl_gift_bag", prev_counts=prev_gift_bag_counts),
+            build_product_section("Add-ons Sold (Gross)", addon_products, addon_counts, addon_display_channels, export_id="pnl_addons", prev_counts=prev_addon_counts, mix_base=mix_base, prev_mix_base=prev_mix_base),
+            build_product_section("App Subscriptions", APP_SUB_PRODUCTS, sub_counts, ["DTC", "Apple", "Google"], export_id="pnl_app_subscriptions", prev_counts=prev_sub_counts, mix_base=mix_base, prev_mix_base=prev_mix_base),
+            build_product_section("Seeds Sold (Gross)", seed_items, seed_counts, ["DTC"], show_all=False, values_width=150, export_id="pnl_seeds", prev_counts=prev_seed_counts, mix_base=mix_base, prev_mix_base=prev_mix_base),
+            build_product_section("Gift Bags Sold (Gross)", GIFT_BAG_PRODUCTS, gift_bag_counts, ["DTC"], show_all=False, values_width=150, export_id="pnl_gift_bag", prev_counts=prev_gift_bag_counts, mix_base=mix_base, prev_mix_base=prev_mix_base),
             class_="pnl-page",
         )
 
