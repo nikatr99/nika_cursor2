@@ -161,6 +161,7 @@ ADDITIVE_COLS = [
     "Google_Spend",
     "Bing_Spend",
     "TikTok_Spend",
+    "Snapchat_Spend",
     "Amazon_Spend",
     "Amazon_Spend_US",
     "Amazon_Spend_EU",
@@ -1044,6 +1045,7 @@ DTC_SPEND_COLS = {
     "Google_Spend": PALETTE["orange"],
     "Bing_Spend": PALETTE["purple"],
     "TikTok_Spend": PALETTE["dark"],
+    "Snapchat_Spend": PALETTE["yellow"],
     "Nextdoor_Spend": PALETTE["blue"],
     "Affiliate_Fees": PALETTE["green"],
 }
@@ -5436,6 +5438,7 @@ def server(input: Inputs, output: Outputs, session: Session):
             ("Google", "Google_Spend"),
             ("Bing", "Bing_Spend"),
             ("TikTok", "TikTok_Spend"),
+            ("Snapchat", "Snapchat_Spend"),
             ("Nextdoor", "Nextdoor_Spend"),
         ]:
             add("DTC Spend Breakdown", label, s.get(key, 0))
@@ -5969,6 +5972,7 @@ def server(input: Inputs, output: Outputs, session: Session):
                                 part("Google", "Google_Spend"),
                                 part("Bing", "Bing_Spend"),
                                 part("TikTok", "TikTok_Spend"),
+                                part("Snapchat", "Snapchat_Spend"),
                                 part("Nextdoor", "Nextdoor_Spend"),
                             ],
                             lower_is_better=True,

@@ -35,3 +35,22 @@ def test_customer_rates_are_blank_without_customers():
     assert np.isnan(out.loc[1, "First_Time_Customers_US"])
     assert np.isnan(out.loc[0, "First_Time_Customers_EU"])
     assert out.loc[1, "First_Time_Customers_EU"] == 0.5
+
+
+def test_snapchat_row_is_not_read_as_the_channel_it_replaced():
+    # Row order as on the November 2025 Summary tab, plus the October and 2026 spellings.
+    sheet = [
+        ["TikTok Spend"],
+        ["Snapchat Spend (BestBuy Spend stopped)"],
+        ["Target Spend"],
+        ["Snapchat Spend (TikTok Spend stopped)"],
+        ["Snapchat Spend"],
+        ["BestBuy Spend"],
+        ["Best Buy Spend"],
+    ]
+
+    assert sync.find_label(sheet, sync.BESTBUY_SPEND_LABEL, contains=True) == 6
+    assert sync.find_label(sheet, sync.BESTBUY_SPEND_LABEL, occurrence=2, contains=True) == 7
+    assert sync.find_label(sheet, sync.SNAPCHAT_SPEND_LABEL, contains=True) == 2
+    assert sync.find_label(sheet, sync.SNAPCHAT_SPEND_LABEL, occurrence=2, contains=True) == 4
+    assert sync.find_label(sheet, sync.SNAPCHAT_SPEND_LABEL, occurrence=3, contains=True) == 5

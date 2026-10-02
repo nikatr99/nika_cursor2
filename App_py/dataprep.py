@@ -221,7 +221,7 @@ def apply_dtc_region(df: pd.DataFrame, region: str) -> pd.DataFrame:
             if segmented in out.columns:
                 out[f"{channel}_Spend"] = numeric_col(out, segmented)
         if region == "eu":
-            for col in ["Bing_Spend", "TikTok_Spend", "Nextdoor_Spend", "Affiliate_Fees"]:
+            for col in ["Bing_Spend", "TikTok_Spend", "Snapchat_Spend", "Nextdoor_Spend", "Affiliate_Fees"]:
                 if col in out.columns:
                     out[col] = 0.0
     for base_col in product_base_cols(out, "dtc"):

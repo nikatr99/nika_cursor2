@@ -377,7 +377,7 @@ REQUIRED_REVENUE_COLS = [
     "BestBuy_Orders", "Target_Orders", "Walmart_Orders", "Costco_Orders", "Chewy_Orders",
     "Retail_Orders", "Total_Retail_Orders", "Total_DM_Orders", "Total_B2B_Orders", "App_Orders",
     "Google_Store_Orders", "Apple_Store_Orders", "Meta_Spend", "Google_Spend", "Bing_Spend",
-    "TikTok_Spend", "Amazon_Spend", "Amazon_Spend_US", "Amazon_Spend_EU", "Amazon_Spend_UK",
+    "TikTok_Spend", "Snapchat_Spend", "Amazon_Spend", "Amazon_Spend_US", "Amazon_Spend_EU", "Amazon_Spend_UK",
     "Amazon_Spend_FR", "Amazon_Spend_GER", "Nextdoor_Spend", "IndieGoGo_Spend", "Affiliate_Fees",
     "Rachio_Fees", "Weatherflow_Fees", "Fees", "Costco_Fees", "BestBuy_Spend", "Target_Spend",
     "Walmart_Spend", "Chewy_Spend", "Retail_Spend", "Total_DTC_Spend", "Total_Spend",
@@ -893,6 +893,13 @@ def fill_early_units(revenue: pd.DataFrame, wb: WorkbookCache, sheet: list[list[
     return revenue
 
 
+# October-December 2025 reuse a retired channel's row for Snapchat and leave the old name
+# in brackets: "Snapchat Spend (TikTok Spend stopped)", "Snapchat Spend (BestBuy Spend
+# stopped)". Both patterns are anchored so the bracketed name never reads as that channel.
+SNAPCHAT_SPEND_LABEL = r"^Snapchat Spend"
+BESTBUY_SPEND_LABEL = r"^Best ?Buy Spend$"
+
+
 def fill_summary(revenue: pd.DataFrame, wb: WorkbookCache, dates: list[date], log: SyncLog) -> pd.DataFrame:
     file = wb.path
     sheet_name = "Summary"
@@ -965,12 +972,13 @@ def fill_summary(revenue: pd.DataFrame, wb: WorkbookCache, dates: list[date], lo
         "Google_Spend": "Google Spend",
         "Bing_Spend": "Bing Spend",
         "TikTok_Spend": "TikTok Spend",
+        "Snapchat_Spend": SNAPCHAT_SPEND_LABEL,
         "Amazon_Spend": "Amazon Spend",
         "Amazon_Spend_US": "- Amazon Spend US",
         "Amazon_Spend_UK": "- Amazon Spend UK",
         "Amazon_Spend_FR": "- Amazon Spend FR",
         "Amazon_Spend_GER": "- Amazon Spend GER",
-        "BestBuy_Spend": r"Best ?Buy Spend",
+        "BestBuy_Spend": BESTBUY_SPEND_LABEL,
         "Target_Spend": "Target Spend",
         "Walmart_Spend": "Walmart Spend",
         "Chewy_Spend": "Chewy Spend",
@@ -1019,7 +1027,7 @@ def fill_summary(revenue: pd.DataFrame, wb: WorkbookCache, dates: list[date], lo
     contains_fields = {
         "Walmart_Revenue", "Walmart_Orders", "Costco_Orders", "Chewy_Orders", "Rachio_Orders",
         "Weatherflow_Orders", "Huckberry_Orders", "Digital_Marketplaces_Revenue",
-        "Digital_Marketplaces_Orders", "BestBuy_Spend", "Blended_SPU", "fAOV", "rAOV",
+        "Digital_Marketplaces_Orders", "Blended_SPU", "fAOV", "rAOV",
     }
     # The app block reuses labels that other blocks also carry, so its fields are read
     # from inside the block rather than by counting occurrences. Before Sep 2023 there is
