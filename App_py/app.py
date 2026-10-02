@@ -40,6 +40,7 @@ from dataprep import (
     prepare_dtc_segments,
     product_base_cols,
     rebased_rates,
+    rebuild_unit_totals,
     split_subscription_tax,
     survey_participants,
 )
@@ -1406,6 +1407,30 @@ for addon in ADDON_PRODUCTS:
             col = f"{channel.lower()}_{source_name}"
             if col not in addon["cols"][channel]:
                 addon["cols"][channel].append(col)
+
+
+# The workbook's own hardware-unit line stopped picking up new SKUs in February 2025,
+# so it is rebuilt here from the per-SKU columns the P&L already reports. This runs
+# once SKU_PRODUCTS is final, and feeds every per-unit metric downstream (wSPU, aSPU,
+# Web RPU, Amazon RPU) as well as the summary cards.
+def _hardware_unit_specs() -> Dict[str, List[str]]:
+    specs: Dict[str, List[str]] = {}
+    for channel, prefix, targets in (
+        ("DTC", "dtc", ("DTC_Hardware_Units", "DTC_Total_Hardware_Units")),
+        ("Amazon", "amazon", ("Amazon_Hardware_Units",)),
+    ):
+        base = [col for product in SKU_PRODUCTS for col in product_cols_for_channel(product, channel)]
+        for target in targets:
+            specs[target] = base
+        scope = "DTC" if channel == "DTC" else "Amazon"
+        for region in ("us", "eu"):
+            specs[f"{scope}_{region.upper()}_Hardware_Units"] = [
+                col.replace(f"{prefix}_", f"{prefix}_{region}_", 1) for col in base
+            ]
+    return specs
+
+
+revenue_data = rebuild_unit_totals(revenue_data, _hardware_unit_specs())
 
 
 def pnl_seed_items() -> List[dict]:

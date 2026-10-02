@@ -522,6 +522,36 @@ def apply_renewals_exclusion(df: pd.DataFrame, enabled: bool) -> pd.DataFrame:
     return out
 
 
+def rebuild_unit_totals(df: pd.DataFrame, specs: Dict[str, Sequence[str]]) -> pd.DataFrame:
+    """Recompute a unit total from the per-SKU columns that make it up.
+
+    The workbooks carry a single hardware-unit line beside the per-SKU block, and the
+    two agreed until the line stopped being extended: from February 2025 it misses
+    HBF PRO, HBF Solar PRO, Bird Buddy 2 and the two retail SKUs, so it undercounts
+    DTC by tens of thousands of units. Every per-unit metric divides by that line, so
+    the gap inflates spend-per-unit and revenue-per-unit rather than showing up as a
+    missing row.
+
+    The per-SKU columns are the ones the P&L reports and the ones that tie out, so
+    they are the source of truth and the line is derived from them. For Amazon, and
+    for DTC before February 2025, this changes nothing: the two already matched to
+    the unit.
+    """
+    out = df.copy()
+    updates: Dict[str, pd.Series] = {}
+    for target, sources in specs.items():
+        present = [col for col in sources if col in out.columns]
+        if not present:
+            continue
+        updates[target] = out[present].apply(pd.to_numeric, errors="coerce").fillna(0).sum(axis=1)
+    if updates:
+        out = pd.concat(
+            [out.drop(columns=[c for c in updates if c in out.columns]), pd.DataFrame(updates, index=out.index)],
+            axis=1,
+        )
+    return out
+
+
 def survey_participants(df: pd.DataFrame) -> pd.Series:
     if "q0_participants" in df.columns:
         return pd.to_numeric(df["q0_participants"], errors="coerce").fillna(0)
