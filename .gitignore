@@ -25,3 +25,9 @@ App_py/data/google_sheets_sync_skips_*.csv
 
 # Local Claude Code settings
 .claude/settings.local.json
+
+# Raw Drive export dropped inside Google Sheets/2026/ on 2 Oct 2026. These are
+# duplicates of the 2026 workbooks under their Drive names; the sync only reads
+# "Google Sheets/<year>/*.xlsx", so it never looks at them. Kept on disk,
+# untracked, so git history does not carry a second copy of every workbook.
+Google Sheets/*/drive-download-*/
