@@ -415,6 +415,9 @@ DTC_BASE_PRODUCTS = [
     "Smart Bird Feeder PRO Solar with PEX (Retail SKU)", "Smart Hummingbird Feeder PRO Solar (Retail SKU)",
     "Bird Buddy 2", "Birdbuddy 2 PRO", "Birdbuddy 2 Retail SKU", "Birdbuddy 2 Nectar",
     "Birdbuddy 2 Nectar PRO", "Birdbuddy 2 Mini non Solar", "Birdbuddy 2 Mini Solar", "BB2 Mini Retail SKU",
+    # The Nook arrives on the DTC P&L in October 2026. Amazon has no rows for it yet.
+    "Bird Buddy Nook", "Bird Buddy Nook Solar", "Bird Buddy Nook (The Learning Bundle)",
+    "Nook Perch Extender - White", "Nook Solar Roof",
     "Pollinator Pot", "Wall Mount",
     "Suet Ball Holder", "3-in-1 Nutrition Set - Blue", "3-in-1 Nutrition Set - Yellow",
     "Solar Roof Single - Blue", "Solar Roof Single - Yellow", "Perch Extender - Blue", "Perch Extender - Yellow",

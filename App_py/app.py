@@ -1366,6 +1366,30 @@ SKU_PRODUCTS.extend(
             "badge": "Retail SKU",
             "cols": cols_for_product("Smart Hummingbird Feeder PRO Solar (Retail SKU)"),
         },
+        # The Nook line, from October 2026. The plain Nook is the SKU Target sells; the
+        # Learning Bundle is the DTC pack with the Bird Anatomy book and keeps its own
+        # row rather than folding into the Nook.
+        {
+            "name": "Bird Buddy Nook",
+            "sku": "BBG1002BAE",
+            "image": "nook.webp",
+            "badge": "BB2",
+            "cols": cols_for_product("Bird Buddy Nook"),
+        },
+        {
+            "name": "Bird Buddy Nook Solar",
+            "sku": "BBG1003BAF",
+            "image": "nook-solar.webp",
+            "badge": "BB2",
+            "cols": cols_for_product("Bird Buddy Nook Solar"),
+        },
+        {
+            "name": "Bird Buddy Nook (The Learning Bundle)",
+            "sku": "BBG1002BAE-1",
+            "image": "nook-learning-bundle.webp",
+            "badge": "BB2",
+            "cols": cols_for_product("Bird Buddy Nook (The Learning Bundle)"),
+        },
     ]
 )
 
@@ -1395,6 +1419,24 @@ for product_name, product_key in [
 ]:
     for channel, prefix in [("Target", "target"), ("BestBuy", "bestbuy"), ("Chewy", "chewy"), ("Walmart", "walmart"), ("Walmart Retail", "walmart_retail"), ("Ace Hardware", "ace_hardware")]:
         append_cols(product_name, channel, [f"{prefix}_{product_key}"])
+
+ADDON_PRODUCTS.extend(
+    [
+        {
+            "name": "Nook Perch Extender - White",
+            "sku": "BBG1021WHT",
+            "image": "nook-perch-extender.webp",
+            "badge": "BB2",
+            "cols": cols_for_product("Nook Perch Extender - White", PNL_ADDON_CHANNELS),
+        },
+        {
+            "name": "Nook Solar Roof",
+            "image": "nook-solar.webp",
+            "badge": "BB2",
+            "cols": cols_for_product("Nook Solar Roof", PNL_ADDON_CHANNELS),
+        },
+    ]
+)
 
 for addon_name, product_key in [
     ("3-in-1 Nutrition Set - Blue", "3-in-1 Nutrition Set - Blue"),

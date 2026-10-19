@@ -61,6 +61,7 @@ SKU_MAP = {
     "BCG1013BAA": "3-in-1 Nutrition Set - Blue",
     "BBG1021BAA": "Perch Extender - Blue",
     "BBG1003BAE": "Bird Buddy 2",
+    "BBG1002BAE": "Bird Buddy Nook",
 }
 
 # Retail SKUs deliberately left out of the dashboard. Listing one here silences the

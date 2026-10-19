@@ -58,17 +58,32 @@ def test_nature_cam_pro_is_reported_as_hardware_not_an_addon():
     assert "Nature Cam PRO" not in [p["name"] for p in addons]
 
 
-def test_family_units_cover_every_feeder_except_bird_buddy_home():
-    # The requested line-up leaves Bird Buddy Home out, so the family totals sit below
-    # the raw SKU totals by exactly that product. Pinning it here means the gap stays
-    # deliberate rather than becoming a silent miscount.
+# Feeders the SBF/HBF line-up deliberately leaves out. Bird Buddy Home was not in the
+# requested list; the three Nook rows arrived in October 2026, after it was written.
+FAMILY_EXCLUDED = [
+    "Bird Buddy Home",
+    "Bird Buddy Nook",
+    "Bird Buddy Nook Solar",
+    "Bird Buddy Nook (The Learning Bundle)",
+]
+
+
+def test_family_units_leave_out_exactly_the_products_we_expect():
+    # The family totals sit below the raw SKU totals by exactly these products. Pinning
+    # the list means a feeder added later shows up here as a decision to make, instead
+    # of silently dropping out of the view.
     units, _, _ = app.family_pnl_product_sets()
     grouped = {c for p in units for cols in p["cols"].values() for c in cols}
-    home = next(p for p in app.SKU_PRODUCTS if p["name"] == "Bird Buddy Home")
-    home_cols = {c for cols in home["cols"].values() for c in cols}
     raw = {c for p in app.SKU_PRODUCTS for cols in p["cols"].values() for c in cols}
-    assert home_cols and not (grouped & home_cols)
-    assert raw - grouped == home_cols
+    excluded = {
+        c
+        for p in app.SKU_PRODUCTS
+        if p["name"] in FAMILY_EXCLUDED
+        for cols in p["cols"].values()
+        for c in cols
+    }
+    assert excluded and not (grouped & excluded)
+    assert raw - grouped == excluded
 
 
 def test_pole_system_and_planter_base_map_to_their_shipping_skus():
