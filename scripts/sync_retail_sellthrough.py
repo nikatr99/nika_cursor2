@@ -60,7 +60,14 @@ SKU_MAP = {
     "BWH1025RAA": "Smart Hummingbird Feeder PRO Solar (Retail SKU)",
     "BCG1013BAA": "3-in-1 Nutrition Set - Blue",
     "BBG1021BAA": "Perch Extender - Blue",
+    "BBG1003BAE": "Bird Buddy 2",
 }
+
+# Retail SKUs deliberately left out of the dashboard. Listing one here silences the
+# warning below for it, so the warning only ever names a SKU nobody has looked at.
+# Birdbuddy Nook (BBG1002BAE) is NOT listed: it sells at Target from 16 Oct 2026 and
+# still needs a product, so the warning should keep naming it.
+SKU_UNMAPPED_KNOWN: set[str] = set()
 
 # The retail SKUs go on sale in August 2025, which is where every channel but one starts
 # reporting them. Target's column also carries May to July 2025, a stretch the workbook
@@ -138,6 +145,7 @@ def load_sku_mix(path: Path, start_date: pd.Timestamp, end_date: pd.Timestamp) -
     wb = load_workbook(path, read_only=False, data_only=True)
     ws = wb["SKU MIX (by channel by sku)"]
     cols: list[tuple[int, str, str]] = []
+    unmapped: list[str] = []
     current_channel = ""
     for col in range(2, ws.max_column + 1):
         channel = clean_text(ws.cell(1, col).value)
@@ -150,6 +158,18 @@ def load_sku_mix(path: Path, start_date: pd.Timestamp, end_date: pd.Timestamp) -
         product = SKU_MAP.get(sku)
         if prefix and product:
             cols.append((col, prefix, sku))
+        elif prefix and sku and sku not in SKU_UNMAPPED_KNOWN:
+            # Without this the column is dropped without a word, which is how the
+            # Birdbuddy Nook sold at Target for three days before anyone noticed it
+            # was missing from the dashboard.
+            name = clean_text(ws.cell(2, col).value) or "unnamed"
+            unmapped.append(f"{current_channel} / {sku} ({name})")
+
+    if unmapped:
+        print("WARNING: retail SKUs with no dashboard product, their sell-through is not imported:")
+        for item in unmapped:
+            print(f"  - {item}")
+        print("  Add them to SKU_MAP, or to SKU_UNMAPPED_KNOWN once deliberately excluded.")
 
     # A SKU that changes name partway through reports under both, so every field a column
     # can land in is seeded on each row and the days it does not sell stay at zero.

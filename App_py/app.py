@@ -1377,6 +1377,8 @@ for channel in ["DTC", "Amazon"]:
     prefix = "dtc" if channel == "DTC" else "amazon"
     append_cols("Smart Hummingbird Feeder PRO Solar (Retail SKU)", channel, [f"{prefix}_Smart Hummingbird Feeder PRO Solar (Retail SKU)"])
 append_cols("Bird Buddy Home", "Amazon", ["amazon_Bird Buddy 2"])
+# Target began selling it on 15 Oct 2026; the retail sell-through sync writes this column.
+append_cols("Bird Buddy Home", "Target", ["target_Bird Buddy 2"])
 for channel in ["Walmart", "Costco", "Huckberry"]:
     append_cols("Bird Buddy Home", channel, [f"{channel.lower()}_Bird Buddy 2"])
 
