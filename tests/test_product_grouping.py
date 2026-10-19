@@ -12,6 +12,9 @@ FAMILY_UNITS = [
     "HBF",
     "HBF w Solar Roof",
     "HBF w Solar Roof + extra base&flower ports (Retail)",
+    "Nook",
+    "Nook w Solar Roof",
+    "Nook + Bird Anatomy book (Learning Bundle)",
     "Nature Cam PRO",
 ]
 
@@ -25,6 +28,8 @@ FAMILY_ADDONS = [
     "HBF Solar Roof",
     "Pole System",
     "Planter Base",
+    "Nook Perch Extender",
+    "Nook Solar Roof",
 ]
 
 
@@ -58,14 +63,9 @@ def test_nature_cam_pro_is_reported_as_hardware_not_an_addon():
     assert "Nature Cam PRO" not in [p["name"] for p in addons]
 
 
-# Feeders the SBF/HBF line-up deliberately leaves out. Bird Buddy Home was not in the
-# requested list; the three Nook rows arrived in October 2026, after it was written.
-FAMILY_EXCLUDED = [
-    "Bird Buddy Home",
-    "Bird Buddy Nook",
-    "Bird Buddy Nook Solar",
-    "Bird Buddy Nook (The Learning Bundle)",
-]
+# The one feeder the SBF/HBF line-up deliberately leaves out: Bird Buddy Home was not
+# in the requested list. The Nook rows were added to the view in October 2026.
+FAMILY_EXCLUDED = ["Bird Buddy Home"]
 
 
 def test_family_units_leave_out_exactly_the_products_we_expect():

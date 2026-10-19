@@ -1667,6 +1667,9 @@ def family_pnl_product_sets() -> tuple[List[dict], List[dict], List[dict]]:
 
     Pole System is the two Nature Stations and Planter Base is the Pollinator Pot;
     both are named for the part the customer buys rather than the SKU it ships under.
+
+    The Nook rows joined in October 2026 and keep the same shape as the rest: one line
+    per thing sold, with the Learning Bundle apart from the bare Nook.
     """
     sources = [*SKU_PRODUCTS, *ADDON_PRODUCTS]
     family_skus = merged_products(
@@ -1711,6 +1714,24 @@ def family_pnl_product_sets() -> tuple[List[dict], List[dict], List[dict]]:
                 "sources": ["Smart Hummingbird Feeder PRO Solar (Retail SKU)"],
             },
             {
+                "name": "Nook",
+                "image": "nook.webp",
+                "badge": "BB2",
+                "sources": ["Bird Buddy Nook"],
+            },
+            {
+                "name": "Nook w Solar Roof",
+                "image": "nook-solar.webp",
+                "badge": "BB2",
+                "sources": ["Bird Buddy Nook Solar"],
+            },
+            {
+                "name": "Nook + Bird Anatomy book (Learning Bundle)",
+                "image": "nook-learning-bundle.webp",
+                "badge": "BB2",
+                "sources": ["Bird Buddy Nook (The Learning Bundle)"],
+            },
+            {
                 "name": "Nature Cam PRO",
                 "image": "nature-cam-icon.png",
                 "badge": "PRO",
@@ -1747,6 +1768,18 @@ def family_pnl_product_sets() -> tuple[List[dict], List[dict], List[dict]]:
                 "sources": ["Nature Station Essential", "Nature Station Bloom"],
             },
             {"name": "Planter Base", "image": "pollinator-pot.webp", "sources": ["Pollinator Pot"]},
+            {
+                "name": "Nook Perch Extender",
+                "image": "nook-perch-extender.webp",
+                "badge": "BB2",
+                "sources": ["Nook Perch Extender - White"],
+            },
+            {
+                "name": "Nook Solar Roof",
+                "image": "nook-solar.webp",
+                "badge": "BB2",
+                "sources": ["Nook Solar Roof"],
+            },
         ],
         ADDON_PRODUCTS,
         PNL_ADDON_CHANNELS,
